@@ -1,0 +1,130 @@
+/** Imports **/
+@import url("reset.css");
+@import url("grid.css");
+/** Fonts **/
+@import url("../assets/fonts/OpenSans/OpenSans.css");
+@import url("../assets/fonts/SketchBlockBold/SketchBlockBold.css");
+@import url("../assets/fonts/Lato/Lato.css");
+@import url("../assets/fonts/AracneCondensed/AracneCondensed.css");
+
+body {
+    background: #4c5466;
+	font-family: Lato;
+	font-weight: 400;
+	font-size: 16px;
+	background-image: url('../assets/tavle_bg.jpg');
+}
+
+
+/** Menu **/
+.menu {
+    width: 120px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    -webkit-box-shadow: 1px 0px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 0px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: 1px 0px 3px -1px rgba(0,0,0,0.75);
+}
+
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li.menu-item img.logo {
+    max-width: 80%;
+}
+
+.menu-item {
+    text-align: center;
+    padding: 20px 0;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+#menu-cup {
+    height: 38px;
+    width: 42px;
+}
+
+#menu-shop {
+    height: 38px;
+    width: 42px;
+}
+
+#menu-bell {
+    height: 36px;
+    width: 42px;
+}
+
+#menu-cart {
+    height: 38px;
+    width: 42px;
+    position: relative;
+    right: 4px;
+}
+
+#menu-info {
+    height: 38px;
+    width: 38px;
+}
+
+
+//Page
+.site-content {
+	margin-left: 120px;
+}
+
+.header-bg {
+    padding-top: 40px;
+    background: rgb(49,52,59);
+    background: linear-gradient(90deg, rgba(49,52,59,1) 0%, rgba(68,72,80,1) 100%);
+}
+
+.main-button {
+    display: flex;
+    align-items: center;
+    a {
+        border: 2px solid #fff;
+        border-radius: 23px;
+        padding: 12px 25px 14px;
+        color: #fff;
+        text-decoration: none;
+    }
+    &.header-button {
+        margin: 0 0 130px;
+    }
+}
+
+h1.heading {
+    font-family: SketchBlockBold;
+    font-size: 4.25rem;
+    line-height: 1.15;
+    color: #fff;
+    &.header-heading {
+        margin: 140px 0 25px;
+    }
+}
+
+p.text {
+    font-family: Lato;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+    &.header-text {
+        margin: 0 0 40px;
+    }
+}
+
+.header-icecream {
+    background-image: url('../assets/icecream-cone-header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 55%;
+}
