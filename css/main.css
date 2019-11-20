@@ -91,6 +91,10 @@ li.menu-item img.logo {
   background: linear-gradient(90deg, #31343b 0%, #444850 100%);
 }
 
+.beige {
+  background: #F6F2EC;
+}
+
 .main-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,6 +116,15 @@ li.menu-item img.logo {
   margin: 0 0 130px;
 }
 
+.main-button.eco-button {
+  margin: 0 0 0 50px;
+}
+
+.main-button.eco-button a {
+  color: #202020;
+  border-color: #202020;
+}
+
 h1.heading {
   font-family: SketchBlockBold;
   font-size: 4.25rem;
@@ -121,6 +134,18 @@ h1.heading {
 
 h1.heading.header-heading {
   margin: 140px 0 25px;
+}
+
+h2.heading {
+  font-family: SketchBlockBold;
+  font-size: 3.125rem;
+  line-height: 1.15;
+}
+
+h2.heading.eco-heading {
+  margin: 100px 0 30px;
+  color: #202020;
+  padding: 0 0 0 50px;
 }
 
 p.text {
@@ -134,10 +159,46 @@ p.text.header-text {
   margin: 0 0 40px;
 }
 
+p.text.eco-text {
+  margin: 0 0 40px;
+  padding: 0 0 0 50px;
+  color: #202020;
+}
+
 .header-icecream {
   background-image: url("../assets/icecream-cone-header.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: 55%;
+}
+
+.fit-to-col {
+  width: 100%;
+}
+
+.eco-img {
+  margin: 100px 0 0;
+}
+
+.eco-icon {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  height: 80px;
+  padding: 5px;
+  margin: 10px;
+  opacity: .15;
+}
+
+.eco-container {
+  padding-bottom: 90px;
+}
+
+.scroll-for-more {
+  width: 120px;
+  position: absolute;
+  bottom: 40px;
+  left: 530px;
+  opacity: .6;
 }
 /*# sourceMappingURL=main.css.map */
