@@ -148,6 +148,11 @@ h2.heading.eco-heading {
   padding: 0 0 0 50px;
 }
 
+h2.heading.some-header {
+  margin: 100px auto;
+  color: #fff;
+}
+
 p.text {
   font-family: Lato;
   font-size: 1.2rem;

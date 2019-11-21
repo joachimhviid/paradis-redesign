@@ -132,6 +132,10 @@ h2.heading {
         color: #202020;
         padding: 0 0 0 50px;
     }
+    &.some-header {
+        margin: 100px auto;
+        color: #fff;
+    }
 }
 
 p.text {
