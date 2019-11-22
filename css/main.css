@@ -14,6 +14,11 @@ body {
   background-image: url("../assets/tavle_bg.jpg");
 }
 
+body.login {
+  background: #fff;
+  background-image: none;
+}
+
 /** Menu **/
 .menu {
   width: 120px;
@@ -136,6 +141,12 @@ h1.heading.header-heading {
   margin: 140px 0 25px;
 }
 
+h2.login-heading {
+  font-family: Lato;
+  font-size: 1.75rem;
+  color: #202020;
+}
+
 h2.heading {
   font-family: SketchBlockBold;
   font-size: 3.125rem;
@@ -192,6 +203,11 @@ p.text.footer-text {
   color: #202020;
   font-size: .8125rem;
   margin: 13px 0;
+}
+
+p.text.login-text {
+  color: #202020;
+  font-size: .875rem;
 }
 
 .header-icecream {
@@ -259,5 +275,33 @@ footer li {
 
 b {
   font-weight: bold;
+}
+
+.login-hero-container {
+  background: #202020;
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+
+.login-hero {
+  width: 100%;
+  opacity: .8;
+}
+
+.login-logo {
+  position: absolute;
+  left: 0;
+  width: 46px;
+}
+
+.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=main.css.map */

@@ -12,7 +12,11 @@ body {
 	font-family: Lato;
 	font-weight: 400;
 	font-size: 16px;
-	background-image: url('../assets/tavle_bg.jpg');
+    background-image: url('../assets/tavle_bg.jpg');
+    &.login {
+        background: #fff;
+        background-image: none;
+    }
 }
 
 
@@ -123,18 +127,25 @@ h1.heading {
     }
 }
 
-h2.heading {
-    font-family: SketchBlockBold;
-    font-size: 3.125rem;
-    line-height: 1.15;
-    &.eco-heading {
-        margin: 100px 0 30px;
+h2 {
+    &.login-heading {
+        font-family: Lato;
+        font-size: 1.75rem;
         color: #202020;
-        padding: 0 0 0 50px;
     }
-    &.some-header {
-        margin: 100px 0 90px;
-        color: #fff;
+    &.heading {
+        font-family: SketchBlockBold;
+        font-size: 3.125rem;
+        line-height: 1.15;
+        &.eco-heading {
+            margin: 100px 0 30px;
+            color: #202020;
+            padding: 0 0 0 50px;
+        }
+        &.some-header {
+            margin: 100px 0 90px;
+            color: #fff;
+        }
     }
 }
 
@@ -171,6 +182,10 @@ p.text {
         color: #202020;
         font-size: .8125rem;
         margin: 13px 0;
+    }
+    &.login-text {
+        color: #202020;
+        font-size: .875rem;
     }
 }
 
@@ -241,4 +256,27 @@ footer {
 
 b {
     font-weight: bold;
+}
+
+.login-hero-container {
+    background: #202020;
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+.login-hero {
+    width: 100%;
+    opacity: .8;
+}
+
+.login-logo {
+    position: absolute;
+    left: 0;
+    width: 46px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
 }
