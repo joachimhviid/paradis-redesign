@@ -133,8 +133,24 @@ h2.heading {
         padding: 0 0 0 50px;
     }
     &.some-header {
-        margin: 100px auto;
+        margin: 100px 0 90px;
         color: #fff;
+    }
+}
+
+h3 {
+    font-family: AracneCondensed;
+    &.footer-heading {
+        font-size: 1.875rem;
+        &::after {
+            content: '';
+            display: block;
+            margin: 10px 0 20px 0;
+            width: 80px;
+            height: 8px;
+            background-image: url('../assets/stroke.svg');
+            background-size: 100% 100%;
+        }
     }
 }
 
@@ -150,6 +166,11 @@ p.text {
         margin: 0 0 40px;
         padding: 0 0 0 50px;
         color: #202020;
+    }
+    &.footer-text {
+        color: #202020;
+        font-size: .8125rem;
+        margin: 13px 0;
     }
 }
 
@@ -178,14 +199,46 @@ p.text {
     opacity: .15;
 }
 
-.eco-container {
-    padding-bottom: 90px;
-}
-
 .scroll-for-more {
     width: 120px;
     position: absolute;
     bottom: 40px;
     left: 530px;
     opacity: .6;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.some-img {
+    border: 10px solid #fff;
+    margin: 0 0 30px;
+}
+
+.container-wide {
+    &.some-container {
+        margin-bottom: 100px;
+    }
+    &.eco-container {
+        padding-bottom: 90px;
+    }
+}
+
+.some-icon-wrapper {
+    svg {
+        width: 32px;
+        margin-right: 7px;
+    }
+}
+
+footer {
+    padding: 100px 0;
+    li {
+        margin: 0 0 13px 0;
+    }
+}
+
+b {
+    font-weight: bold;
 }
