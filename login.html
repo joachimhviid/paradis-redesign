@@ -8,13 +8,13 @@
     <title>Paradis | Handcrafted Ice Cream</title>
 </head>
 <body class="login">
-    <div class="login-hero-container">
+    <div class="login-hero-container not-mobile">
             <img class="login-hero" src="./assets/insta2.jpg" alt="Large side image">
     </div>
     <div class="container-wide">
         <img class="login-logo" src="./assets/paradis.svg" alt="Paradis isvaffel logo">
-        <div class="row">
-            <div class="col-xs-4 login-wrapper">
+        <div class="row login-row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-4 login-wrapper">
                 <h2 class="login-heading">Paradis Admin</h2>
                 <p class="text login-text">Log ind for at fortsætte</p>
                 <form class="login-form" action="/admin/login" method="post">
@@ -31,13 +31,12 @@
                         </label>
                     </div>
                     <div class="cookie-wrapper">
-                        <input id="cookie" type="checkbox" name="cookie" value="cookie" checked /> <label for="cookie">Hold mig logget ind</label>
+                        <input id="cookie" type="checkbox" name="cookie" value="cookie" checked /> <label for="cookie">Husk mig (Cookie)</label> <label class="forgot-password">Glemt kodeord?</label>
                     </div>
                     <input tabindex="3" name="login-submit" type="submit" value="Log ind" class="login-button" />
                 </form>
                 <div class="copyright-wrapper">
-                    <p class="text footer-text copyright">Copyright &copy; 2019 Paradis. Alle Rettigheder Reserveres.</p>
-                    <p class="text footer-text powered">Powered by Netclear & Whiiite</p>
+                    <p class="text footer-text copyright">Copyright &copy; 2019 Paradis Danmark A/S. <br>Alle Rettigheder Reserveres.</p>
                 </div>
             </div>
         </div>
