@@ -145,6 +145,7 @@ h2.login-heading {
   font-family: Lato;
   font-size: 1.75rem;
   color: #202020;
+  margin-bottom: 10px;
 }
 
 h2.heading {
@@ -208,6 +209,17 @@ p.text.footer-text {
 p.text.login-text {
   color: #202020;
   font-size: .875rem;
+  margin-bottom: 40px;
+}
+
+p.text.powered {
+  margin-top: 0px;
+  color: #4E8DE5;
+}
+
+p.text.copyright {
+  margin-bottom: 2px;
+  color: #8C8C8C;
 }
 
 .header-icecream {
@@ -293,9 +305,10 @@ b {
   position: absolute;
   left: 0;
   width: 46px;
+  margin: 80px 0 0 15px;
 }
 
-.login-form {
+form.login-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,5 +316,99 @@ b {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+form input {
+  font-size: 1rem;
+  color: #8E9091;
+  padding: 24px 30px 16px;
+  border: #C5C9D5 solid 1px;
+  width: 100%;
+}
+
+form input.top {
+  border-radius: 3px 3px 0 0;
+}
+
+form input.top:focus + .label-email {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .75rem;
+}
+
+form input.bottom {
+  border-radius: 0 0 3px 3px;
+}
+
+form input.bottom:focus + .label-password {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .75rem;
+}
+
+form input.login-button {
+  padding: 13px 45px;
+  background: #62B9E9;
+  color: #fff;
+  border: none;
+  width: 145px;
+  border-radius: 25px;
+  margin-top: 35px;
+}
+
+form input#cookie {
+  width: auto;
+}
+
+.email-input {
+  position: relative;
+}
+
+.email-input .label-email {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  font-size: 1rem;
+  color: #8E9091;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-input .label-password {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  font-size: 1rem;
+  color: #8E9091;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.cookie-wrapper {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cookie-wrapper label {
+  font-size: .75rem;
+  color: #555966;
+  margin-left: 10px;
+}
+
+.login-wrapper {
+  margin: 260px 0 0 0;
+}
+
+.login-wrapper .copyright-wrapper {
+  margin-top: 260px;
 }
 /*# sourceMappingURL=main.css.map */

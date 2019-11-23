@@ -132,6 +132,7 @@ h2 {
         font-family: Lato;
         font-size: 1.75rem;
         color: #202020;
+        margin-bottom: 10px;
     }
     &.heading {
         font-family: SketchBlockBold;
@@ -186,6 +187,15 @@ p.text {
     &.login-text {
         color: #202020;
         font-size: .875rem;
+        margin-bottom: 40px;
+    }
+    &.powered {
+        margin-top: 0px;
+        color: #4E8DE5;
+    }
+    &.copyright {
+        margin-bottom: 2px;
+        color: #8C8C8C;
     }
 }
 
@@ -274,9 +284,87 @@ b {
     position: absolute;
     left: 0;
     width: 46px;
+    margin: 80px 0 0 15px;
 }
 
-.login-form {
+form {
+    &.login-form {
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        font-size: 1rem;
+        color: #8E9091;
+        padding: 24px 30px 16px;
+        border: #C5C9D5 solid 1px;
+        width: 100%;
+        &.top {
+            border-radius: 3px 3px 0 0;
+            &:focus + .label-email{
+                transform: translateY(-100%);
+                font-size: .75rem;
+            }
+        }
+        &.bottom {
+            border-radius: 0 0 3px 3px;
+            &:focus + .label-password{
+                transform: translateY(-100%);
+                font-size: .75rem;
+            }
+        }
+        &.login-button {
+            padding: 13px 45px;
+            background: #62B9E9;
+            color: #fff;
+            border: none;
+            width: 145px;
+            border-radius: 25px;
+            margin-top: 35px;
+        }
+        &#cookie {
+            width: auto;
+        }
+    }
+}
+
+.email-input {
+    position: relative;
+    .label-email {
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        font-size: 1rem;
+        color: #8E9091;
+        transition: all .3s ease;
+    }
+}
+
+.password-input {
+    position: relative;
+    .label-password {
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        font-size: 1rem;
+        color: #8E9091;
+        transition: all .3s ease;
+    }
+}
+
+.cookie-wrapper {
+    margin-top: 15px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    label {
+        font-size: .75rem;
+        color: #555966;
+        margin-left: 10px;
+    }
+}
+
+.login-wrapper {
+    margin: 260px 0 0 0;
+    .copyright-wrapper {
+        margin-top: 260px;
+    }
 }
