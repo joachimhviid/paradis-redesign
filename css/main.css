@@ -45,7 +45,7 @@ body.login {
 }
 
 li.menu-item img.logo {
-  max-width: 80%;
+  max-width: 50px;
 }
 
 .menu-item {
@@ -141,6 +141,10 @@ li.menu-item img.logo {
   transition: .3s;
   background: #202020;
   color: #fff;
+}
+
+.logo-text svg {
+  height: 46px;
 }
 
 h1.heading {
