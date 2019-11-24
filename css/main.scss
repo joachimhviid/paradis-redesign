@@ -106,8 +106,7 @@ li.menu-item img.logo {
         text-decoration: none;
         &:hover {
             transition: .3s;
-            box-shadow: inset #fff 0 0 0 50px;
-            color: #202020;
+            background: rgba($color: #fff, $alpha: .15);
         }
     }
     &.header-button {
@@ -120,7 +119,7 @@ li.menu-item img.logo {
             border-color: #202020;
             &:hover {
                 transition: .3s;
-                box-shadow: inset #202020 0 0 0 50px;
+                background: #202020;
                 color: #fff;
             }
         }
@@ -264,6 +263,11 @@ p.text {
     svg {
         width: 32px;
         margin-right: 7px;
+        &:hover {
+            transform: rotate(-5deg) scale(1.2);
+            transition: all .3s;
+            cursor: pointer;
+        }
     }
 }
 
@@ -272,6 +276,51 @@ footer {
     li {
         margin: 0 0 13px 0;
     }
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            text-decoration: underline;
+        }
+        &.open-times {
+            color: #3477DB;
+        }
+    }
+}
+
+.btn {
+	//display: inline-block;
+	color: #3477DB;
+	min-width: 154px;
+	margin-right: 50px;
+	padding: 0 0 8px 0;
+	position: relative;
+	text-align: center;
+	
+	&:hover {
+		.button-stroke:nth-child(2) {
+			stroke-dashoffset: 0;
+		}
+	}
+}
+
+.button-stroke {
+	display: block;
+	width: 100%;
+	height: 9px;
+	stroke: transparent;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	//stroke-width: 1;
+	
+	&:nth-child(2) {
+		stroke-dasharray: 650px;
+		stroke-dashoffset: 650px;
+		stroke: rgb(77, 135, 221);
+		stroke-width: 2;
+		transition: stroke-dashoffset 800ms ease-out;
+	}
 }
 
 b {
@@ -344,7 +393,9 @@ form {
             margin-top: 30px;
             &:hover {
                 transition: .3s;
-                box-shadow: inset #4c5466 0 0 0 50px;
+                background: #59A9D1;
+                cursor: pointer;
+                //box-shadow: inset #4c5466 0 0 0 50px;
             }
         }
         &#cookie {
@@ -517,6 +568,28 @@ form {
     }
     .login-logo {
         margin-left: calc(16.66% + 15px);
+    }
+    .site-content {
+        margin-left: 0px;
+    }
+    .header-icecream {
+        background-position-x: 100%;
+    }
+    .scroll-for-more {
+        left: 480px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-icecream {
+        background-image: url(/assets/icecream-cone-header.png);
+        background-position-x: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-icecream {
+        background-position-x: 55%;
     }
 }
 
