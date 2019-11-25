@@ -19,67 +19,6 @@ body {
     }
 }
 
-
-/** Menu **/
-.menu {
-    width: 120px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #fff;
-    -webkit-box-shadow: 1px 0px 3px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 0px 3px -1px rgba(0,0,0,0.75);
-    box-shadow: 1px 0px 3px -1px rgba(0,0,0,0.75);
-}
-
-.menu-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-li.menu-item img.logo {
-    max-width: 50px;
-}
-
-.menu-item {
-    text-align: center;
-    padding: 20px 0;
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-}
-
-#menu-cup {
-    height: 38px;
-    width: 42px;
-}
-
-#menu-shop {
-    height: 38px;
-    width: 42px;
-}
-
-#menu-bell {
-    height: 36px;
-    width: 42px;
-}
-
-#menu-cart {
-    height: 38px;
-    width: 42px;
-    position: relative;
-    right: 4px;
-}
-
-#menu-info {
-    height: 38px;
-    width: 38px;
-}
-
-
 //Page
 .site-content {
 	margin-left: 120px;
@@ -653,6 +592,100 @@ form {
     footer {
         padding: 50px 0;
     }
+    //Tab bar
+    .menu {
+        width: 100%;
+        height: 70px;
+        z-index: 90;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        .menu-item-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 0 30px;
+        }
+    }
+    li.menu-item.logo-item {
+        display: none;
+    }
+
+    .menu-item {
+        text-align: center;
+        padding: 10px 0;
+        a {
+            font-size: .5rem;
+            text-decoration: none;
+            color: inherit;
+            img {
+                max-width: 30px;
+            }
+        }
+    }
+
+    #menu-cup {
+        height: 38px;
+        width: 42px;
+    }
+
+    #menu-shop {
+        height: 38px;
+        width: 42px;
+    }
+
+    #menu-bell {
+        height: 38px;
+        width: 42px;
+    }
+
+    #menu-cart {
+        height: 38px;
+        width: 42px;
+    }
+
+    #menu-info {
+        height: 38px;
+        width: 38px;
+    }
+    // Top menu
+    .top-menu {
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        z-index: 90;
+        top: 0;
+        background: #fff;
+        transition: top .3s;
+        .top-menu-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 30px;
+            li {
+                padding: 12px 0;
+                img {
+                    height: 100%;
+                }
+                &.mobile-cart {
+                    width: 60px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background: #F5F1F1;
+                    padding: 24px 0 21px;
+                    img {
+                        width: 25px;
+                        height: 23px;
+                    }
+                }
+            }
+        }
+    }
+    .logo-text {
+        padding-top: 70px;
+    }
 }
 
 @media (min-width: 769px) and (orientation: portrait) {
@@ -676,12 +709,96 @@ form {
     .scroll-for-more {
         left: 480px;
     }
+    .not-desktop {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
+    .not-desktop {
+        display: none;
+    }
     .header-icecream {
         background-image: url(/assets/icecream-cone-header.png);
-        background-position-x: 90%;
+        background-position-x: 90% !important;
+    }
+    /** Menu **/
+    .menu {
+        width: 120px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        -webkit-box-shadow: 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
+        box-shadow: 1px 0px 3px -1px rgba(0, 0, 0, 0.75);
+    }
+
+    .menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ul {
+            width: 100%;
+        }
+    }
+
+    li.menu-item svg.logo {
+        max-width: 50px;
+        &:hover {
+            animation: icecream-bounce .4s ease-in-out 0s 1;
+            #red {
+                animation: icecream-bounce .4s ease-in-out .05s 1;
+            }
+            #white {
+                animation: icecream-bounce .4s ease-in-out .1s 1;
+            }
+            #yellow {
+                animation: icecream-bounce .4s ease-in-out .15s 1;
+            }
+        }
+    }
+
+    .menu-item {
+        text-align: center;
+        padding: 20px 0;
+        a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        &:hover:not(.logo-item) {
+            background: #EAEAEA;
+            transition: all .3s;
+        }
+    }
+
+    #menu-cup {
+        height: 38px;
+        width: 42px;
+    }
+
+    #menu-shop {
+        height: 38px;
+        width: 42px;
+    }
+
+    #menu-bell {
+        height: 36px;
+        width: 42px;
+    }
+
+    #menu-cart {
+        height: 38px;
+        width: 42px;
+        position: relative;
+        right: 4px;
+    }
+
+    #menu-info {
+        height: 38px;
+        width: 38px;
     }
 }
 
@@ -701,5 +818,17 @@ form {
     }
     .login-wrapper {
         margin: 190px 0 0 0;
+    }
+}
+
+@keyframes icecream-bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }

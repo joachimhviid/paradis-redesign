@@ -8,40 +8,60 @@
     <title>Paradis | Handcrafted Ice Cream</title>
 </head>
 <body>
-    <nav class="menu not-mobile">
+    <div class="top-menu not-desktop" id="topbar">
+        <ul class="top-menu-wrapper">
+            <li class="top-menu-item"><a href="/">
+                <img src='./assets/paradis.svg' alt="Paradis isvaffel logo"/>
+            </a></li>
+            <li class="top-menu-item mobile-cart"><a href="#">
+                    <img src='./assets/paradis-vogn.svg' alt="Paradis vogn"/>
+            </a></li>
+        </ul>
+    </div>
+    <nav class="menu">
         <div class="menu-wrapper">
             <ul class="menu-item-list">
-                <li class="menu-item">
-                    <a to="/">
-                        <img src='./assets/paradis.svg' alt="Paradis isvaffel logo" class="logo"/>
+                <li class="menu-item logo-item">
+                    <a href="/">
+                        <!-- <img src='./assets/paradis.svg' alt="Paradis isvaffel logo" class="logo"/> -->
+                        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 90">
+                            <defs><style>.cls-1{fill:#f9b500;stroke:#0d0802;stroke-linejoin:round;stroke-width:2.5px}</style></defs>
+                            <g id="cone" data-svg-origin="23.050521850585938 38" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px 0px;">
+                              <path class="cls-1" d="M10.36 38l25.54 5.38s-18.58 45-22.65 44.19S10.36 38 10.36 38z"></path>
+                              <path fill="none" stroke-width="2.5" stroke-linejoin="round" stroke="#0d0802" d="M10.47 75.08l17.72-19.21-5.31-13.19-10.35 10.21 8.52 23.83"></path>
+                            </g>
+                            <circle id="red" cx="14.15" cy="29.68" r="11.48" stroke-width="2.5" fill="#cc302b" stroke-miterlimit="10" stroke="#0d0802" data-svg-origin="14.149999618530273 41.15999984741211" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px 0px;"></circle>
+                            <circle id="yellow" class="cls-1" cx="36.81" cy="34.35" r="11.48" data-svg-origin="36.810001373291016 45.82999801635742" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px 0px;"></circle>
+                            <circle id="white" cx="29.08" cy="17.27" r="11.48" fill="#fff" stroke-width="2.5" stroke-linejoin="round" stroke="#0d0802" data-svg-origin="29.079999923706055 17.270000457763672" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px 0px;"></circle>
+                          </svg>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a to="/produkter">
-                        <img src='./assets/paradis-kop.svg' alt="Isbæger" id="menu-cup"/> 
+                    <a href="/produkter">
+                        <img src='./assets/paradis-kop.svg' alt="Isbæger" id="menu-cup"/>
                         <p>Produkter</p>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a to="/find-butik">
+                    <a href="/find-butik">
                         <img src='./assets/paradis-butik.svg' alt="Paradis butik" id="menu-shop"/>
                         <p>Find butik</p>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a to="/catering">
+                    <a href="/catering">
                         <img src='./assets/paradis-klokke.svg' alt="Paradis klokke" id="menu-bell"/>
                         <p>Catering</p>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a to="/bestilling">
+                    <a href="/bestilling">
                         <img src='./assets/paradis-vogn.svg' alt="Paradis vogn" id="menu-cart"/>
                         <p>Bestilling</p>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a to="/om-paradis">
+                    <a href="/om-paradis">
                         <img src='./assets/paradis-info.svg' alt="Paradis info" id="menu-info"/>
                         <p>Om paradis</p>
                     </a>
@@ -142,7 +162,7 @@
         <footer class="beige">
             <div class="container-wide">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xs-offset-right-0 col-sm-offset-right-6 col-md-offset-right-1">
+                    <div class="col-xs-8 col-sm-6 col-md-2 col-lg-2 col-xs-offset-right-4 col-sm-offset-right-6 col-md-offset-right-1">
                         <img src="./assets/paradis-logo-text.svg" alt="Paradis logo">
                         <p class="text footer-text">&copy; 2019 Paradis Danmark A/S</p>
                         <div class="some-icon-wrapper">
@@ -172,8 +192,6 @@
                                       <path class="scribble scribble4" d="M62.6 88.7s7.2-7.1 8.2-5.7-12.4 23-12.3 23.2l56.6-37-61.4 55.9c.2.3 88.8-60.1 88.8-60.1l-85.6 71.7c1.9 2.6 107.6-72.2 107.6-72.2s-112.1 80.9-107.9 87c2.2 3.1 131.3-97.6 136.3-90.5.1.1-149.7 96.7-140.9 109.2 3.4 5 161-108.6 161-108.6S40.1 170.8 50.6 185.8c7 10 180.1-132.3 185.4-124.7 0 0-192.3 136.5-184.6 136.8S252.2 63.4 252.2 63.4C260.5 75.2 33 204.3 54.9 212L275 63c4.9 7-232 154.6-223.8 166.4 4.6 6.5 236.6-170.3 241.2-163.6 0 0-241.2 163.6-238.8 176.5 1.9 10 251.8-174.5 251.8-174.5S48.9 253.4 52.1 258c0 0 131.2-103.7 136.4-96.3 7.3 10.4-133.1 108.7-133.1 108.7 7.5 10.7 117.6-100.3 125.7-88.8 2.1 3.1-129.2 105.8-129.2 105.8S178.5 185.6 184.3 194L57.2 297.6c1.8 2.5 125.6-87.9 125.6-87.9 2.9 4.2-123.5 101.1-123.5 101.1s71.8-61.7 77.2-54c0 0-76 63.6-74 66.4 0 0 78.9-66.3 84.1-58.9 0 0-90.1 67.7-85.3 74.4 2.5 3.6 70.7-60.5 75.9-53.1l-70.7 64.1c1.2 1.7 78.5-64.9 83.2-58.2 0 0-85.3 69.4-82.9 72.8l98.7-69.3c5.2 7.5-84.7 74.1-84.7 74.1s91-75 96.2-67.5c1.1 1.5-91.1 78.4-91.1 78.4 1.7 2.4 93.5-66.2 93.9-65.7 5.2 7.5-82.4 72.4-82.4 72.4 5.1 7.3 83.6-58.6 83.6-58.6l-66.2 61.4c4.8 6.8 59.9-42.3 59.9-42.3s-36.6 37-34.3 40.3c.5.7 43.3-37.5 45.9-33.8s-29.6 37-29.6 37 22.7-23 25.3-19.3l-10 16.9c.8 1.1 12.8-8.2 12.8-8.2" style="stroke-dashoffset: 7447.03; stroke-dasharray: 0px, 999999px; opacity: 0;"></path>
                                     </g>
                                 </svg>
-                            <!-- <img src="./assets/instagram-scribble.svg" alt="Instagram logo">
-                            <img src="./assets/facebook-scribble.svg" alt="Facebook logo"> -->
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
@@ -221,5 +239,6 @@
             </div>
         </footer>
     </div>
+    <script src="/js/hide-menu-on-scroll.js"></script>
 </body>
 </html>
