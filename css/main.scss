@@ -35,6 +35,9 @@ body {
 
 .beige {
     background: #F6F2EC;
+    &.config-content {
+        padding: 80px 0;
+    }
 }
 
 button {
@@ -42,16 +45,17 @@ button {
     border: none;
     outline: none;
     &.main-button {
+        display: inline-block;
         padding: 15px 50px;
         background: #62B9E9;
         color: #fff;
         width: 220px;
         border-radius: 25px;
-        font-size: 1.125rem;
+        font-size: 1rem;
         margin-bottom: 20px;
         &:hover {
             transition: .3s;
-            background: #59A9D1;
+            background: rgb(81, 154, 190);
             cursor: pointer;
         }
     }
@@ -153,6 +157,14 @@ h3 {
             background-size: 100% 100%;
         }
     }
+    &.config-desc-heading {
+        font-size: 1.25rem;
+        color: #92887B;
+    }
+}
+
+h4 {
+    font-family: AracneCondensed;
 }
 
 p.text {
@@ -290,9 +302,7 @@ footer {
 	stroke: transparent;
 	position: absolute;
 	left: 0;
-	bottom: -5px;
-	//stroke-width: 1;
-	
+	bottom: -5px;	
 	&:nth-child(2) {
 		stroke-dasharray: 650px;
 		stroke-dashoffset: 650px;
@@ -545,7 +555,7 @@ form {
         li {
             list-style: none;
             color: #fff;
-            font-size: 1.125rem;
+            font-size: 1rem;
             padding: 24px 40px 24px 40px;
             &:hover {
                 background: #202020;
@@ -569,9 +579,49 @@ form {
     }
 }
 
-.config-icecream {
-    margin: 90px 0;
-    box-shadow: 120px 80px 40px 20px #D9C8C8;
+.config-icecream-wrapper {
+    margin: 90px auto;
+    width: 25%;
+    height: 300px;
+    .config-icecream {
+        position: relative;
+        width: 100%;
+        z-index: 80;
+    }
+    .config-icecream-glow {
+        position: relative;
+        z-index: 79;
+        width: 60%;
+        height: 200px;
+        top: -220px;
+        margin: auto;
+        border-radius: 50%;
+        box-shadow: 0 -5px 40px 5px #D9C8C8;
+    }
+}
+
+.config-item {
+    box-sizing: border-box;
+    background: #E9E2D8;
+    margin: 40px 0 0 0;
+    width: 66.66%;
+    height: 200px;
+    h3.item-name {
+        font-size: 1.1rem;
+        color: #92887B;
+    }
+    h4.item-price {
+        font-size: 1rem;
+    }
+    .item-thumb {
+        width: 70%;
+        position: absolute;
+        right: 16.666%;
+        top: 0;
+        img {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -846,38 +896,16 @@ form {
             text-decoration: none;
             color: inherit;
             display: block;
+            img {
+                height: 34px;
+                width: auto;
+                margin: 0 0 4px 0;
+            }
         }
         &:hover:not(.logo-item) {
             background: #EAEAEA;
             transition: all .3s;
         }
-    }
-
-    #menu-cup {
-        height: 38px;
-        width: 42px;
-    }
-
-    #menu-shop {
-        height: 38px;
-        width: 42px;
-    }
-
-    #menu-bell {
-        height: 36px;
-        width: 42px;
-    }
-
-    #menu-cart {
-        height: 38px;
-        width: 42px;
-        position: relative;
-        right: 4px;
-    }
-
-    #menu-info {
-        height: 38px;
-        width: 38px;
     }
 }
 
