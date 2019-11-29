@@ -193,18 +193,24 @@ p.text {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #E9E2D8;
-  margin: 40px 0 0 0;
+  margin: 25% 0 0 0;
+  padding: 25px;
   width: 66.66%;
   height: 200px;
 }
 
-.config-item h3.item-name {
-  font-size: 1.1rem;
+.config-item .item-text-wrapper {
+  position: absolute;
+  bottom: 25px;
+}
+
+.config-item .item-text-wrapper h3.item-name {
+  font-size: 1.8rem;
   color: #92887B;
 }
 
-.config-item h4.item-price {
-  font-size: 1rem;
+.config-item .item-text-wrapper h4.item-price {
+  font-size: 1.3rem;
 }
 
 .config-item .item-thumb {

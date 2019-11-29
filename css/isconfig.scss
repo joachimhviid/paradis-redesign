@@ -155,15 +155,20 @@ p.text {
 .config-item {
     box-sizing: border-box;
     background: #E9E2D8;
-    margin: 40px 0 0 0;
+    margin: 25% 0 0 0;
+    padding: 25px;
     width: 66.66%;
     height: 200px;
-    h3.item-name {
-        font-size: 1.1rem;
-        color: #92887B;
-    }
-    h4.item-price {
-        font-size: 1rem;
+    .item-text-wrapper {
+        position: absolute;
+        bottom: 25px;
+        h3.item-name {
+            font-size: 1.8rem;
+            color: #92887B;
+        }
+        h4.item-price {
+            font-size: 1.3rem;
+        }
     }
     .item-thumb {
         width: 70%;
