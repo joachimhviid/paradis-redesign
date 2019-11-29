@@ -18,9 +18,6 @@ body {
 //Page
 .site-content {
     margin-left: 120px;
-    &.config-spacing {
-        margin-left: 420px;
-    }
 }
 
 .header-bg {
@@ -31,39 +28,6 @@ body {
 
 .beige {
     background: #F6F2EC;
-    &.config-content {
-        padding: 80px 0;
-    }
-}
-
-button {
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    &.main-button {
-        display: inline-block;
-        padding: 15px 50px;
-        background: #62B9E9;
-        color: #fff;
-        width: 220px;
-        border-radius: 25px;
-        font-size: 1rem;
-        margin-bottom: 20px;
-        &:hover {
-            transition: .3s;
-            background: rgb(81, 154, 190);
-            cursor: pointer;
-        }
-    }
-    &.sub-button {
-        background: none;
-        color: #5D5D5D;
-        &:hover {
-            transition: .3s;
-            color: #727272;
-            cursor: pointer;
-        }
-    }
 }
 
 .main-button {
@@ -111,9 +75,6 @@ h1.heading {
     &.header-heading {
         margin: 140px 0 25px;
     }
-    &.config-heading {
-        margin: 60px 0 5px;
-    }
 }
 
 h2 {
@@ -147,10 +108,6 @@ h3 {
             background-image: url('../assets/stroke.svg');
             background-size: 100% 100%;
         }
-    }
-    &.config-desc-heading {
-        font-size: 1.25rem;
-        color: #92887B;
     }
 }
 
@@ -298,112 +255,12 @@ b {
     font-weight: bold;
 }
 
-// Icecream config
-.config-menu {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    left: 120px;
-    width: 300px;
-    height: 100vh;
-    background: #2A2A2A;
-    ul {
-        display: flex;
-        flex-direction: column;
-        li {
-            list-style: none;
-            color: #fff;
-            font-size: 1rem;
-            padding: 24px 40px 24px 40px;
-            &:hover {
-                background: #202020;
-                cursor: pointer;
-            }
-            &.active {
-                background: #202020;
-            }
-            i.counter {
-                float: right;
-                letter-spacing: 2px;
-                color: #5D5D5D;
-            }
-        }
-    }
-    .back-forward-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 0 35px 0;
-    }
-}
-
-.config-icecream-wrapper {
-    margin: 90px auto;
-    width: 25%;
-    height: 300px;
-    .config-icecream {
-        position: relative;
-        width: 100%;
-        z-index: 80;
-    }
-    .config-icecream-glow {
-        position: relative;
-        z-index: 79;
-        width: 60%;
-        height: 200px;
-        top: -220px;
-        margin: auto;
-        border-radius: 50%;
-        box-shadow: 0 -5px 40px 5px #D9C8C8;
-    }
-}
-
-.config-item {
-    box-sizing: border-box;
-    background: #E9E2D8;
-    margin: 40px 0 0 0;
-    width: 66.66%;
-    height: 200px;
-    h3.item-name {
-        font-size: 1.1rem;
-        color: #92887B;
-    }
-    h4.item-price {
-        font-size: 1rem;
-    }
-    .item-thumb {
-        width: 70%;
-        position: absolute;
-        right: 16.666%;
-        top: 0;
-        img {
-            width: 100%;
-        }
-    }
-}
-
 @media (max-width: 768px) {
     .not-mobile {
         display: none;
     }
     .container-wide {
         padding: 0 40px;
-    }
-    .login-logo {
-        margin-left: 40px;
-        margin-top: 40px;
-    }
-    .login-wrapper {
-        margin: 190px 0 0 0;
-        .copyright-wrapper {
-            margin-top: 80px;
-        }
-    }
-    .cookie-wrapper {
-        label {
-            margin-left: 5px;
-        }
     }
     .site-content {
         margin-left: 0;
@@ -511,31 +368,6 @@ b {
             }
         }
     }
-
-    #menu-cup {
-        height: 38px;
-        width: 42px;
-    }
-
-    #menu-shop {
-        height: 38px;
-        width: 42px;
-    }
-
-    #menu-bell {
-        height: 38px;
-        width: 42px;
-    }
-
-    #menu-cart {
-        height: 38px;
-        width: 42px;
-    }
-
-    #menu-info {
-        height: 38px;
-        width: 38px;
-    }
     // Top menu
     .top-menu {
         height: 70px;
@@ -579,14 +411,6 @@ b {
 @media (min-width: 769px) and (orientation: portrait) {
     .not-mobile {
         display: none;
-    }
-    .login-row {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    .login-logo {
-        margin-left: calc(16.66% + 15px);
     }
     .site-content {
         margin-left: 0px;
@@ -677,13 +501,6 @@ b {
 @media (max-width: 1500px) {
     .container-wide {
         padding: 0 40px;
-    }
-    .login-logo {
-        margin-left: 40px;
-        margin-top: 40px;
-    }
-    .login-wrapper {
-        margin: 190px 0 0 0;
     }
 }
 
