@@ -82,8 +82,9 @@ h3 {
 }
 
 h3.config-desc-heading {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   color: #92887B;
+  margin: 0 0 50px;
 }
 
 h4 {
@@ -131,21 +132,27 @@ p.text {
 
 .config-menu ul li {
   list-style: none;
+}
+
+.config-menu ul li button {
   color: #fff;
+  background: #2A2A2A;
   font-size: 1rem;
+  width: 100%;
+  text-align: left;
   padding: 24px 40px 24px 40px;
 }
 
-.config-menu ul li:hover {
+.config-menu ul li button:hover {
   background: #202020;
   cursor: pointer;
 }
 
-.config-menu ul li.active {
+.config-menu ul li button.active {
   background: #202020;
 }
 
-.config-menu ul li i.counter {
+.config-menu ul li button i.counter {
   float: right;
   letter-spacing: 2px;
   color: #5D5D5D;
@@ -189,6 +196,10 @@ p.text {
           box-shadow: 0 -5px 40px 5px #D9C8C8;
 }
 
+.item-row {
+  margin: 0 0 50px 0;
+}
+
 .config-item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -197,6 +208,7 @@ p.text {
   padding: 25px;
   width: 66.66%;
   height: 200px;
+  border-radius: 3px;
 }
 
 .config-item .item-text-wrapper {
@@ -209,8 +221,9 @@ p.text {
   color: #92887B;
 }
 
-.config-item .item-text-wrapper h4.item-price {
+.config-item .item-text-wrapper h4.item-sub {
   font-size: 1.3rem;
+  color: #92887B;
 }
 
 .config-item .item-thumb {
@@ -222,6 +235,43 @@ p.text {
 
 .config-item .item-thumb img {
   width: 100%;
+}
+
+.config-item .item-add {
+  position: absolute;
+  bottom: 25px;
+  right: calc(25px + 35%);
+  height: 30px;
+  width: 70px;
+  border: 1px solid #92887B;
+  border-radius: 30px;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.config-item .item-add span {
+  color: #92887B;
+}
+
+.config-item .item-add:hover {
+  cursor: pointer;
+  background: #92887B;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.config-item .item-add:hover span {
+  color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.config-section {
+  display: none;
+}
+
+.active-section {
+  display: block;
 }
 
 @media (max-width: 768px) {
