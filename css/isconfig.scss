@@ -8,21 +8,23 @@
 
 body {
     background: #4c5466;
-	font-family: Lato;
-	font-weight: 400;
-	font-size: 16px;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 16px;
     background-image: url('../assets/tavle_bg.jpg');
 }
 
 .site-content {
-    margin-left: 120px;
+    margin-left: 100px;
+
     &.config-spacing {
-        margin-left: 420px;
+        margin-left: 400px;
     }
 }
 
 .beige {
     background: #F6F2EC;
+
     &.config-content {
         padding: 80px 0;
     }
@@ -32,6 +34,30 @@ button {
     box-sizing: border-box;
     border: none;
     outline: none;
+
+    .nearbyshop &.main-button {
+        width: auto;
+        padding: 9px 35px;
+        margin: 0 15px 0 0;
+        font-size: .75rem;
+    }
+
+    .nearbyshop &.alt-sub-button {
+        padding: 9px 25px;
+        border: 1px solid #999999;
+        border-radius: 25px;
+        background: none;
+        color: #999999;
+        font-size: .75rem;
+
+        &:hover {
+            cursor: pointer;
+            color: #727272;
+            border: 1px solid #727272;
+            transition: color .3s, border .3s;
+        }
+    }
+
     &.main-button {
         display: inline-block;
         padding: 15px 50px;
@@ -41,15 +67,18 @@ button {
         border-radius: 25px;
         font-size: 1rem;
         margin-bottom: 20px;
+
         &:hover {
             transition: .3s;
             background: rgb(81, 154, 190);
             cursor: pointer;
         }
     }
+
     &.sub-button {
         background: none;
         color: #5D5D5D;
+
         &:hover {
             transition: .3s;
             color: #727272;
@@ -63,18 +92,31 @@ h1.heading {
     font-size: 4.25rem;
     line-height: 1.15;
     color: #fff;
+
     &.config-heading {
         margin: 60px 0 5px;
     }
 }
 
+h2 {
+    &.shopname {
+        font-family: Lato;
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #202020;
+        margin: 0 0 10px;
+    }
+}
+
 h3 {
     font-family: AracneCondensed;
+
     &.config-desc-heading {
         font-size: 1.4rem;
         color: #92887B;
         margin: 0 0 50px;
     }
+
 }
 
 h4 {
@@ -86,6 +128,12 @@ p.text {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #fff;
+
+    &.shopaddress {
+        font-size: 1rem;
+        color: #202020;
+        opacity: .7;
+    }
 }
 
 .center-text {
@@ -98,15 +146,18 @@ p.text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    left: 120px;
+    left: 100px;
     width: 300px;
     height: 100vh;
     background: #2A2A2A;
+
     ul {
         display: flex;
         flex-direction: column;
+
         li {
             list-style: none;
+
             button {
                 color: #fff;
                 background: #2A2A2A;
@@ -114,14 +165,17 @@ p.text {
                 width: 100%;
                 text-align: left;
                 padding: 24px 40px 24px 40px;
+
                 &:hover {
                     background: #202020;
                     cursor: pointer;
-                    transition: all .3s;
+                    transition: background .3s;
                 }
+
                 &.active {
                     background: #202020;
                 }
+
                 i.counter {
                     float: right;
                     letter-spacing: 2px;
@@ -130,6 +184,7 @@ p.text {
             }
         }
     }
+
     .back-forward-wrapper {
         display: flex;
         flex-direction: column;
@@ -142,11 +197,13 @@ p.text {
     margin: 90px auto;
     width: 25%;
     height: 300px;
+
     .config-icecream {
         position: relative;
         width: 100%;
         z-index: 80;
     }
+
     .config-icecream-glow {
         position: relative;
         z-index: 79;
@@ -167,53 +224,161 @@ p.text {
     box-sizing: border-box;
     background: #E9E2D8;
     margin: 25% 0 0 0;
-    padding: 25px;
+    padding: 20px;
     width: 66.66%;
     height: 200px;
     border-radius: 3px;
+
     .item-text-wrapper {
         position: absolute;
-        bottom: 25px;
+        bottom: 20px;
+
         h3.item-name {
             font-size: 1.8rem;
             color: #92887B;
         }
+
         h4.item-sub {
             font-size: 1.3rem;
             color: #92887B;
         }
     }
+
     .item-thumb {
         width: 70%;
         position: absolute;
         right: 16.666%;
         top: 0;
+
         img {
             width: 100%;
         }
     }
+
     .item-add {
         position: absolute;
-        bottom: 25px;
-        right: calc(25px + 35%);
+        bottom: 20px;
+        right: calc(20px + 35%);
         height: 30px;
         width: 70px;
         border: 1px solid #92887B;
         border-radius: 30px;
         text-align: center;
         padding: 5px 0;
+
         span {
             color: #92887B;
         }
+
         &:hover {
             cursor: pointer;
             background: #92887B;
-            transition: all .3s;
+            transition: background .3s;
+
             span {
                 color: #fff;
-                transition: all .3s;
+                transition: color .3s;
             }
         }
+    }
+}
+
+.nearbyshop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    padding: 40px 40px;
+
+    .buttonwrapper {
+        position: absolute;
+        bottom: 40px;
+    }
+}
+
+.searchwrapper {
+    margin: 0 85px;
+    height: 80px;
+}
+
+form {
+    &.login-form {
+        display: flex;
+    }
+
+    input {
+        font-size: 1rem;
+        color: #8E9091;
+        padding: 24px 30px 16px;
+        border: #C5C9D5 solid 1px;
+        width: 100%;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &.left {
+            border-radius: 3px 0 0 3px;
+
+            &:focus+.label-address {
+                transform: translateY(-100%);
+                font-size: .75rem;
+            }
+
+            &:valid+.label-address {
+                transform: translateY(-100%);
+                font-size: .75rem;
+            }
+        }
+
+        &.right {
+            border-radius: 0 3px 3px 0;
+
+            &:focus+.label-zipcode {
+                transform: translateY(-100%);
+                font-size: .75rem;
+            }
+
+            &:valid+.label-zipcode {
+                transform: translateY(-100%);
+                font-size: .75rem;
+            }
+        }
+    }
+}
+
+.address-input {
+    position: relative;
+    flex-grow: 1;
+
+    .label-address {
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        font-size: 1rem;
+        color: #8E9091;
+        transition: all .3s ease;
+    }
+}
+
+.zipcode-input {
+    position: relative;
+    flex-grow: 1;
+
+    .label-zipcode {
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        font-size: 1rem;
+        color: #8E9091;
+        transition: all .3s ease;
+    }
+}
+
+.container-wide {
+    &.config-section {
+        padding: 0 105px;
     }
 }
 
@@ -229,104 +394,123 @@ p.text {
     .not-mobile {
         display: none;
     }
+
     .container-wide {
         padding: 0 40px;
     }
+
     .site-content {
         margin-left: 0;
     }
+
     h1.heading {
         font-size: 2rem;
         line-height: 1.15;
     }
+
     h2 {
         &.heading {
             font-size: 1.8rem;
             line-height: 1.15;
-    }
-    p.text {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    //Tab bar
-    .menu {
-        width: 100%;
-        height: 70px;
-        z-index: 90;
-        position: fixed;
-        bottom: 0;
-        background: #fff;
-        .menu-item-list {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            padding: 0 30px;
         }
-    }
-    li.menu-item.logo-item {
-        display: none;
-    }
 
-    .menu-item {
-        text-align: center;
-        padding: 10px 0;
-        a {
-            font-size: .5rem;
-            text-decoration: none;
-            color: inherit;
-            img {
-                max-width: 30px;
+        p.text {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        //Tab bar
+        .menu {
+            width: 100%;
+            height: 70px;
+            z-index: 90;
+            position: fixed;
+            bottom: 0;
+            background: #fff;
+
+            .menu-item-list {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0 30px;
             }
         }
-    }
-    // Top menu
-    .top-menu {
-        height: 70px;
-        width: 100%;
-        position: fixed;
-        z-index: 90;
-        top: 0;
-        background: #fff;
-        transition: top .3s;
-        .top-menu-wrapper {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 0 30px;
-            li {
-                padding: 12px 0;
+
+        li.menu-item.logo-item {
+            display: none;
+        }
+
+        .menu-item {
+            text-align: center;
+            padding: 10px 0;
+
+            a {
+                font-size: .5rem;
+                text-decoration: none;
+                color: inherit;
+
                 img {
-                    height: 100%;
+                    max-width: 30px;
                 }
-                &.mobile-cart {
-                    width: 60px;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background: #F5F1F1;
-                    padding: 24px 0 21px;
+            }
+        }
+
+        // Top menu
+        .top-menu {
+            height: 70px;
+            width: 100%;
+            position: fixed;
+            z-index: 90;
+            top: 0;
+            background: #fff;
+            transition: top .3s;
+
+            .top-menu-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 30px;
+
+                li {
+                    padding: 12px 0;
+
                     img {
-                        width: 25px;
-                        height: 23px;
+                        height: 100%;
+                    }
+
+                    &.mobile-cart {
+                        width: 60px;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        background: #F5F1F1;
+                        padding: 24px 0 21px;
+
+                        img {
+                            width: 25px;
+                            height: 23px;
+                        }
                     }
                 }
             }
         }
+
+        .logo-text {
+            padding-top: 70px;
+        }
     }
-    .logo-text {
-        padding-top: 70px;
-    }
-}
 }
 
 @media (min-width: 769px) and (orientation: portrait) {
     .not-mobile {
         display: none;
     }
+
     .site-content {
         margin-left: 0px;
     }
+
     .not-desktop {
         display: none;
     }
@@ -336,9 +520,10 @@ p.text {
     .not-desktop {
         display: none;
     }
+
     /** Menu **/
     .menu {
-        width: 120px;
+        width: 100px;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -353,6 +538,7 @@ p.text {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         ul {
             width: 100%;
         }
@@ -360,14 +546,18 @@ p.text {
 
     li.menu-item svg.logo {
         max-width: 50px;
+
         &:hover {
             animation: icecream-bounce .4s ease-in-out 0s 1;
+
             #red {
                 animation: icecream-bounce .4s ease-in-out .05s 1;
             }
+
             #white {
                 animation: icecream-bounce .4s ease-in-out .1s 1;
             }
+
             #yellow {
                 animation: icecream-bounce .4s ease-in-out .15s 1;
             }
@@ -377,19 +567,22 @@ p.text {
     .menu-item {
         text-align: center;
         padding: 20px 0;
+
         a {
             text-decoration: none;
             color: inherit;
             display: block;
+
             img {
                 height: 34px;
                 width: auto;
                 margin: 0 0 4px 0;
             }
         }
+
         &:hover:not(.logo-item) {
             background: #EAEAEA;
-            transition: all .3s;
+            transition: background .3s;
         }
     }
 }
@@ -404,9 +597,11 @@ p.text {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-5px);
     }
+
     100% {
         transform: translateY(0px);
     }

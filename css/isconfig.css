@@ -14,11 +14,11 @@ body {
 }
 
 .site-content {
-  margin-left: 120px;
+  margin-left: 100px;
 }
 
 .site-content.config-spacing {
-  margin-left: 420px;
+  margin-left: 400px;
 }
 
 .beige {
@@ -34,6 +34,30 @@ button {
           box-sizing: border-box;
   border: none;
   outline: none;
+}
+
+.nearbyshop button.main-button {
+  width: auto;
+  padding: 9px 35px;
+  margin: 0 15px 0 0;
+  font-size: .75rem;
+}
+
+.nearbyshop button.alt-sub-button {
+  padding: 9px 25px;
+  border: 1px solid #999999;
+  border-radius: 25px;
+  background: none;
+  color: #999999;
+  font-size: .75rem;
+}
+
+.nearbyshop button.alt-sub-button:hover {
+  cursor: pointer;
+  color: #727272;
+  border: 1px solid #727272;
+  -webkit-transition: color .3s, border .3s;
+  transition: color .3s, border .3s;
 }
 
 button.main-button {
@@ -77,6 +101,14 @@ h1.heading.config-heading {
   margin: 60px 0 5px;
 }
 
+h2.shopname {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #202020;
+  margin: 0 0 10px;
+}
+
 h3 {
   font-family: AracneCondensed;
 }
@@ -98,6 +130,12 @@ p.text {
   color: #fff;
 }
 
+p.text.shopaddress {
+  font-size: 1rem;
+  color: #202020;
+  opacity: .7;
+}
+
 .center-text {
   text-align: center;
 }
@@ -114,7 +152,7 @@ p.text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  left: 120px;
+  left: 100px;
   width: 300px;
   height: 100vh;
   background: #2A2A2A;
@@ -146,8 +184,8 @@ p.text {
 .config-menu ul li button:hover {
   background: #202020;
   cursor: pointer;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: background .3s;
+  transition: background .3s;
 }
 
 .config-menu ul li button.active {
@@ -207,7 +245,7 @@ p.text {
           box-sizing: border-box;
   background: #E9E2D8;
   margin: 25% 0 0 0;
-  padding: 25px;
+  padding: 20px;
   width: 66.66%;
   height: 200px;
   border-radius: 3px;
@@ -215,7 +253,7 @@ p.text {
 
 .config-item .item-text-wrapper {
   position: absolute;
-  bottom: 25px;
+  bottom: 20px;
 }
 
 .config-item .item-text-wrapper h3.item-name {
@@ -241,8 +279,8 @@ p.text {
 
 .config-item .item-add {
   position: absolute;
-  bottom: 25px;
-  right: calc(25px + 35%);
+  bottom: 20px;
+  right: calc(20px + 35%);
   height: 30px;
   width: 70px;
   border: 1px solid #92887B;
@@ -258,14 +296,126 @@ p.text {
 .config-item .item-add:hover {
   cursor: pointer;
   background: #92887B;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: background .3s;
+  transition: background .3s;
 }
 
 .config-item .item-add:hover span {
   color: #fff;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.nearbyshop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 200px;
+  background: #fff;
+  padding: 40px 40px;
+}
+
+.nearbyshop .buttonwrapper {
+  position: absolute;
+  bottom: 40px;
+}
+
+.searchwrapper {
+  margin: 0 85px;
+  height: 80px;
+}
+
+form.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form input {
+  font-size: 1rem;
+  color: #8E9091;
+  padding: 24px 30px 16px;
+  border: #C5C9D5 solid 1px;
+  width: 100%;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+form input.left {
+  border-radius: 3px 0 0 3px;
+}
+
+form input.left:focus + .label-address {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .75rem;
+}
+
+form input.left:valid + .label-address {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .75rem;
+}
+
+form input.right {
+  border-radius: 0 3px 3px 0;
+}
+
+form input.right:focus + .label-zipcode {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .75rem;
+}
+
+form input.right:valid + .label-zipcode {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .75rem;
+}
+
+.address-input {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.address-input .label-address {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  font-size: 1rem;
+  color: #8E9091;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.zipcode-input {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.zipcode-input .label-zipcode {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  font-size: 1rem;
+  color: #8E9091;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.container-wide.config-section {
+  padding: 0 105px;
 }
 
 .config-section {
@@ -405,7 +555,7 @@ p.text {
   }
   /** Menu **/
   .menu {
-    width: 120px;
+    width: 100px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -464,8 +614,8 @@ p.text {
   }
   .menu-item:hover:not(.logo-item) {
     background: #EAEAEA;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: background .3s;
+    transition: background .3s;
   }
 }
 
