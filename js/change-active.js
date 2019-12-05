@@ -17,8 +17,8 @@ var configSections = [
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < menuBtns.length; i++) {
     menuBtns[i].addEventListener("click", function() {
-        let current = document.getElementsByClassName(" active");
-        current[0].className = current[0].className.replace(" active", "");
+        let currentMenu = document.getElementsByClassName(" active");
+        currentMenu[0].className = currentMenu[0].className.replace(" active", "");
         this.className += " active";
     });
 };
@@ -31,36 +31,45 @@ ChangeSection = (id) => {
 
 NextSection = () => {
     let current = document.getElementsByClassName(" active-section");
-    console.log(current);
+    let currentMenu = document.getElementsByClassName(" active");
+    //console.log(current);
     var currentID = current[0].id;
-    console.log(currentID);
+    //console.log(currentID);
     for (var i = 0; i < configSections.length; i++) {
         if (currentID == configSections[configSections.length - 1].id) {
-            console.log('final');
+            //console.log('final');
+            return;
         }
         else if (currentID == configSections[i].id) {
             configSections[i].className = configSections[i].className.replace(" active-section", "");
+            currentMenu[0].className = currentMenu[0].className.replace(" active", "");
             i++;
-            console.log(configSections[i].id);
+            //console.log(configSections[i].id);
             configSections[i].className += " active-section";
+            menuBtns[i].className += " active";
         }
     }
 };
 
 PrevSection = () => {
     let current = document.getElementsByClassName(" active-section");
-    console.log(current);
+    let currentMenu = document.getElementsByClassName(" active");
+    //console.log(current);
     var currentID = current[0].id;
-    console.log(currentID);
+    //console.log(currentID);
     for (var i = 0; i < configSections.length; i++) {
         if (currentID == configSections[0].id) {
-            console.log('first');
+            //console.log('first');
+            return;
         }
         else if (currentID == configSections[i].id) {
             configSections[i].className = configSections[i].className.replace(" active-section", "");
-            i--;
-            console.log(configSections[i].id);
-            configSections[i].className += " active-section";
+            currentMenu[0].className = currentMenu[0].className.replace(" active", "");
+            let e = i;
+            e--;
+            //console.log(configSections[e].id);
+            configSections[e].className += " active-section";
+            menuBtns[e].className += " active";
         }
     }
 }

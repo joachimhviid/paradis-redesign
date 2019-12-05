@@ -146,6 +146,8 @@ p.text {
 .config-menu ul li button:hover {
   background: #202020;
   cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .config-menu ul li button.active {
