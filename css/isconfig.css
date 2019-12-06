@@ -326,7 +326,7 @@ p.text.shopaddress {
 }
 
 .searchwrapper {
-  margin: 0 85px;
+  margin: 60px 85px;
   height: 80px;
 }
 
@@ -339,7 +339,7 @@ form.login-form {
 form input {
   font-size: 1rem;
   color: #8E9091;
-  padding: 24px 30px 16px;
+  padding: 24px 30px 16px 65px;
   border: #C5C9D5 solid 1px;
   width: 100%;
   outline: none;
@@ -380,6 +380,34 @@ form input.right:valid + .label-zipcode {
   font-size: .75rem;
 }
 
+form input.searchbutton {
+  position: absolute;
+  right: 20px;
+  top: calc((60px - 24px - 1rem)/2);
+  padding: 12px 40px;
+  width: auto;
+  background: #62B9E9;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+}
+
+form input.searchbutton:hover {
+  -webkit-transition: .3s;
+  transition: .3s;
+  background: #59A9D1;
+  cursor: pointer;
+}
+
+label img {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: 20px;
+  top: 25%;
+  opacity: .2;
+}
+
 .address-input {
   position: relative;
   -webkit-box-flex: 1;
@@ -389,7 +417,7 @@ form input.right:valid + .label-zipcode {
 
 .address-input .label-address {
   position: absolute;
-  left: 30px;
+  left: 65px;
   top: 20px;
   font-size: 1rem;
   color: #8E9091;
@@ -406,7 +434,7 @@ form input.right:valid + .label-zipcode {
 
 .zipcode-input .label-zipcode {
   position: absolute;
-  left: 30px;
+  left: 65px;
   top: 20px;
   font-size: 1rem;
   color: #8E9091;

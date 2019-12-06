@@ -25,26 +25,34 @@ for (var i = 0; i < menuBtns.length; i++) {
 
 ChangeSection = (id) => {
     let current = document.getElementsByClassName(" active-section");
+    let icecreamElement = document.getElementById("icecream");
+    let searchElement = document.getElementById("butiksearch");
     current[0].className = current[0].className.replace(" active-section", "");
     id.className += " active-section";
+    if (id == butik) {
+        icecreamElement.style.display = "none";
+        searchElement.style.display = "block";
+    } else {
+        icecreamElement.style.display = "block";
+        searchElement.style.display = "none";
+    }
 };
 
 NextSection = () => {
     let current = document.getElementsByClassName(" active-section");
     let currentMenu = document.getElementsByClassName(" active");
-    //console.log(current);
     var currentID = current[0].id;
-    //console.log(currentID);
     for (var i = 0; i < configSections.length; i++) {
         if (currentID == configSections[configSections.length - 1].id) {
-            //console.log('final');
             return;
+        }
+        else if (condition) {
+            
         }
         else if (currentID == configSections[i].id) {
             configSections[i].className = configSections[i].className.replace(" active-section", "");
             currentMenu[0].className = currentMenu[0].className.replace(" active", "");
             i++;
-            //console.log(configSections[i].id);
             configSections[i].className += " active-section";
             menuBtns[i].className += " active";
         }
@@ -54,12 +62,9 @@ NextSection = () => {
 PrevSection = () => {
     let current = document.getElementsByClassName(" active-section");
     let currentMenu = document.getElementsByClassName(" active");
-    //console.log(current);
     var currentID = current[0].id;
-    //console.log(currentID);
     for (var i = 0; i < configSections.length; i++) {
         if (currentID == configSections[0].id) {
-            //console.log('first');
             return;
         }
         else if (currentID == configSections[i].id) {
@@ -67,7 +72,6 @@ PrevSection = () => {
             currentMenu[0].className = currentMenu[0].className.replace(" active", "");
             let e = i;
             e--;
-            //console.log(configSections[e].id);
             configSections[e].className += " active-section";
             menuBtns[e].className += " active";
         }

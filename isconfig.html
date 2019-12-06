@@ -117,25 +117,38 @@
                         såsom stykker af oreo, karamelsovs og meget mere.</p>
                 </div>
             </div>
-            <div class="row">
+        </div>
+        <div class="container-wide">
+            <div class="row" id="icecream" style="display: none;">
                 <div class="col-xs-12 center-text">
                     <div class="config-icecream-wrapper">
                         <img class="config-icecream" src="/assets/is/vanilje.png" alt="vanilla">
                         <div class="config-icecream-glow"></div>
                     </div>
+                </div>
+            </div>
+            <div class="row" id="butiksearch">
+                <div class="col-xs-12">
                     <div class="searchwrapper">
                         <form class="login-form">
                             <div class="address-input">
-                                <input name="address" class="left" type="text" />
+                                <input name="address" class="left" type="text" required />
                                 <label for="address" class="label-address">
                                     <span class="content-address">Søg efter adresse</span>
                                 </label>
+                                <label for="address">
+                                    <img src="/assets/search-icon.svg" alt="search icon">
+                                </label>
                             </div>
                             <div class="zipcode-input">
-                                <input name="zipcode" class="right" type="text" />
+                                <input name="zipcode" class="right" type="text" required />
                                 <label for="zipcode" class="label-zipcode">
                                     <span>By eller postnummer</span>
                                 </label>
+                                <label for="zipcode">
+                                    <img src="/assets/search-icon.svg" alt="search icon">
+                                </label>
+                                <input type="submit" value="Find butik" class="searchbutton" />
                             </div>
                         </form>
                     </div>
