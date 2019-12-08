@@ -446,6 +446,10 @@ label img {
   padding: 0 105px;
 }
 
+#butik .row {
+  margin-bottom: 30px;
+}
+
 .config-section {
   display: none;
 }
