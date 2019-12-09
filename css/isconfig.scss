@@ -325,10 +325,8 @@ p.text {
     height: 80px;
 }
 
-form {
-    &.login-form {
-        display: flex;
-    }
+.search-form {
+    display: flex;
 
     input {
         font-size: 1rem;

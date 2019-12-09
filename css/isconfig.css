@@ -373,13 +373,13 @@ p.text.shopaddress {
   height: 80px;
 }
 
-form.login-form {
+.search-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-form input {
+.search-form input {
   font-size: 1rem;
   color: #8E9091;
   padding: 24px 30px 16px 65px;
@@ -391,39 +391,39 @@ form input {
   appearance: none;
 }
 
-form input.left {
+.search-form input.left {
   border-radius: 30px 0 0 30px;
 }
 
-form input.left:focus + .label-address {
+.search-form input.left:focus + .label-address {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   font-size: .75rem;
 }
 
-form input.left:valid + .label-address {
+.search-form input.left:valid + .label-address {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   font-size: .75rem;
 }
 
-form input.right {
+.search-form input.right {
   border-radius: 0 30px 30px 0;
 }
 
-form input.right:focus + .label-zipcode {
+.search-form input.right:focus + .label-zipcode {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   font-size: .75rem;
 }
 
-form input.right:valid + .label-zipcode {
+.search-form input.right:valid + .label-zipcode {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   font-size: .75rem;
 }
 
-form input.searchbutton {
+.search-form input.searchbutton {
   position: absolute;
   right: 20px;
   top: calc((60px - 24px - 1rem)/2);
@@ -435,7 +435,7 @@ form input.searchbutton {
   border-radius: 25px;
 }
 
-form input.searchbutton:hover {
+.search-form input.searchbutton:hover {
   -webkit-transition: .3s;
   transition: .3s;
   background: #59A9D1;
