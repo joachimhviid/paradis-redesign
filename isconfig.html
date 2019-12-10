@@ -99,12 +99,12 @@
     <div class="config-menu" id="configMenu">
         <ul>
             <li>
-                <button onclick="ChangeSection(butik)" class="configmenubutton active">
+                <a href="/findbutik.html">
                     Find butik
-                </button>
+                </a>
             </li>
             <li>
-                <button onclick="ChangeSection(grundsmage)" class="configmenubutton">
+                <button onclick="ChangeSection(grundsmage)" class="configmenubutton active">
                     Grundsmag
                 </button>
             </li>
@@ -144,13 +144,13 @@
                 <div class="col-xs-12 center-text">
                     <h1 class="heading config-heading">DIN PARADIS</h1>
                     <p id="headConfigText" class="text config-text">
-                        Vælg den butik du vil hente Din Paradis hos.
+                        Vælg en grundsmag til Din Paradis.
                     </p>
                 </div>
             </div>
         </div>
         <div class="container-wide">
-            <div class="row" id="icecream" style="display: none;">
+            <div class="row" id="icecream">
                 <div class="col-xs-12 center-text">
                     <div class="config-icecream-wrapper">
                         <img class="config-icecream" src="/assets/is/vanilje.png" alt="vanilla" />
@@ -158,114 +158,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row" id="butiksearch">
-                <div class="col-xs-12">
-                    <div class="searchwrapper">
-                        <div class="search-form">
-                            <div class="address-input">
-                                <input name="address" class="left" type="text" required />
-                                <label for="address" class="label-address">
-                                    <span class="content-address">Søg efter adresse</span>
-                                </label>
-                                <label for="address">
-                                    <img src="/assets/search-icon.svg" alt="search icon" />
-                                </label>
-                            </div>
-                            <div class="zipcode-input">
-                                <input name="zipcode" class="right" type="text" required />
-                                <label for="zipcode" class="label-zipcode">
-                                    <span>By eller postnummer</span>
-                                </label>
-                                <label for="zipcode">
-                                    <img src="/assets/search-icon.svg" alt="search icon" />
-                                </label>
-                                <input type="submit" value="Find butik" class="searchbutton" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="beige config-content">
-            <section id="butik" class="container-wide config-section active-section">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <div class="nearbyshop">
-                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
-                            <p class="text shopaddress">
-                                Odense, Mageløs, Mageløs 1, 5000 Odense C
-                            </p>
-                            <div class="buttonwrapper">
-                                <button class="main-button">Vælg</button>
-                                <button class="alt-sub-button">Detaljer</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="nearbyshop">
-                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
-                            <p class="text shopaddress">
-                                Odense, Mageløs, Mageløs 1, 5000 Odense C
-                            </p>
-                            <div class="buttonwrapper">
-                                <button class="main-button">Vælg</button>
-                                <button class="alt-sub-button">Detaljer</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="nearbyshop">
-                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
-                            <p class="text shopaddress">
-                                Odense, Mageløs, Mageløs 1, 5000 Odense C
-                            </p>
-                            <div class="buttonwrapper">
-                                <button class="main-button">Vælg</button>
-                                <button class="alt-sub-button">Detaljer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-4">
-                        <div class="nearbyshop">
-                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
-                            <p class="text shopaddress">
-                                Odense, Mageløs, Mageløs 1, 5000 Odense C
-                            </p>
-                            <div class="buttonwrapper">
-                                <button class="main-button">Vælg</button>
-                                <button class="alt-sub-button">Detaljer</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="nearbyshop">
-                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
-                            <p class="text shopaddress">
-                                Odense, Mageløs, Mageløs 1, 5000 Odense C
-                            </p>
-                            <div class="buttonwrapper">
-                                <button class="main-button">Vælg</button>
-                                <button class="alt-sub-button">Detaljer</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="nearbyshop">
-                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
-                            <p class="text shopaddress">
-                                Odense, Mageløs, Mageløs 1, 5000 Odense C
-                            </p>
-                            <div class="buttonwrapper">
-                                <button class="main-button">Vælg</button>
-                                <button class="alt-sub-button">Detaljer</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="grundsmage" class="container-wide config-section">
+            <section id="grundsmage" class="container-wide config-section active-section">
                 <div class="row">
                     <div class="col-xs-12 center-text">
                         <h3 class="config-desc-heading">
