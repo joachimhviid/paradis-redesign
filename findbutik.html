@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/logo192.png" />
+    <link rel="stylesheet" href="css/isconfig.css" />
+    <title>Paradis | Handcrafted Ice Cream</title>
+</head>
+<body>
+    <div class="top-menu not-desktop" id="topbar">
+        <ul class="top-menu-wrapper">
+            <li class="top-menu-item">
+                <a href="/">
+                    <img src="./assets/paradis.svg" alt="Paradis isvaffel logo" />
+                </a>
+            </li>
+            <li class="top-menu-item mobile-cart">
+                <a href="#">
+                    <img src="./assets/paradis-vogn.svg" alt="Paradis vogn" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <nav class="menu">
+        <div class="menu-wrapper">
+            <ul class="menu-item-list">
+                <li class="menu-item logo-item">
+                    <a href="/">
+                        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 90">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #f9b500;
+                                        stroke: #0d0802;
+                                        stroke-linejoin: round;
+                                        stroke-width: 2.5px;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="cone" data-svg-origin="23.050521850585938 38" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px 0px;">
+                                <path class="cls-1" d="M10.36 38l25.54 5.38s-18.58 45-22.65 44.19S10.36 38 10.36 38z">
+                                </path>
+                                <path fill="none" stroke-width="2.5" stroke-linejoin="round" stroke="#0d0802"
+                                    d="M10.47 75.08l17.72-19.21-5.31-13.19-10.35 10.21 8.52 23.83"></path>
+                            </g>
+                            <circle id="red" cx="14.15" cy="29.68" r="11.48" stroke-width="2.5" fill="#cc302b"
+                                stroke-miterlimit="10" stroke="#0d0802"
+                                data-svg-origin="14.149999618530273 41.15999984741211" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px 0px;"></circle>
+                            <circle id="yellow" class="cls-1" cx="36.81" cy="34.35" r="11.48"
+                                data-svg-origin="36.810001373291016 45.82999801635742" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px 0px;"></circle>
+                            <circle id="white" cx="29.08" cy="17.27" r="11.48" fill="#fff" stroke-width="2.5"
+                                stroke-linejoin="round" stroke="#0d0802"
+                                data-svg-origin="29.079999923706055 17.270000457763672" transform="matrix(1,0,0,1,0,0)"
+                                style="transform-origin: 0px 0px 0px;"></circle>
+                        </svg>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/produkter">
+                        <img src="./assets/paradis-kop.svg" alt="Isbæger" id="menu-cup" />
+                        <p>Produkter</p>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/find-butik">
+                        <img src="./assets/paradis-butik.svg" alt="Paradis butik" />
+                        <p>Find butik</p>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/catering">
+                        <img src="./assets/paradis-klokke.svg" alt="Paradis klokke" />
+                        <p>Catering</p>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/isconfig.html">
+                        <img src="./assets/paradis-vogn.svg" alt="Paradis vogn" />
+                        <p>Bestilling</p>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/om-paradis">
+                        <img src="./assets/paradis-info.svg" alt="Paradis info" />
+                        <p>Om paradis</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="config-menu" id="configMenu">
+        <ul>
+            <li>
+                <button onclick="ChangeSection(butik)" class="configmenubutton active">
+                    Find butik
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(grundsmage)" class="configmenubutton">
+                    Grundsmag
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(ekstraSmage)" class="configmenubutton">
+                    Ekstra smage<i class="counter">0/2</i>
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(striber)" class="configmenubutton">
+                    Striber<i class="counter">0/2</i>
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(knas)" class="configmenubutton">
+                    Knas og stykker<i class="counter">0/2</i>
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(kurv)" class="configmenubutton">
+                    Føj til kurv
+                </button>
+            </li>
+        </ul>
+    </div>
+    <form class="site-content config-spacing" action="">
+        <div class="container-wide">
+            <div class="row">
+                <div class="col-xs-12 center-text">
+                    <h1 class="heading config-heading">DIN PARADIS</h1>
+                    <p id="headConfigText" class="text config-text">
+                        Vælg den butik du vil hente Din Paradis hos.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container-wide">
+            <div class="row" id="butiksearch">
+                <div class="col-xs-12">
+                    <div class="searchwrapper">
+                        <div class="search-form">
+                            <div class="address-input">
+                                <input name="address" class="left" type="text" required />
+                                <label for="address" class="label-address">
+                                    <span class="content-address">Søg efter adresse</span>
+                                </label>
+                                <label for="address">
+                                    <img src="/assets/search-icon.svg" alt="search icon" />
+                                </label>
+                            </div>
+                            <div class="zipcode-input">
+                                <input name="zipcode" class="right" type="text" required />
+                                <label for="zipcode" class="label-zipcode">
+                                    <span>By eller postnummer</span>
+                                </label>
+                                <label for="zipcode">
+                                    <img src="/assets/search-icon.svg" alt="search icon" />
+                                </label>
+                                <input type="submit" value="Find butik" class="searchbutton" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="beige config-content">
+            <section id="butik" class="container-wide config-section active-section">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="nearbyshop">
+                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
+                            <p class="text shopaddress">
+                                Odense, Mageløs, Mageløs 1, 5000 Odense C
+                            </p>
+                            <div class="buttonwrapper">
+                                <button type="button" onclick="Select(this)" class="main-button">Vælg</button>
+                                <button class="alt-sub-button">Detaljer</button>
+                                <input type="checkbox" name="butik[]" value="1" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="nearbyshop">
+                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
+                            <p class="text shopaddress">
+                                Odense, Mageløs, Mageløs 1, 5000 Odense C
+                            </p>
+                            <div class="buttonwrapper">
+                                <button class="main-button">Vælg</button>
+                                <button class="alt-sub-button">Detaljer</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="nearbyshop">
+                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
+                            <p class="text shopaddress">
+                                Odense, Mageløs, Mageløs 1, 5000 Odense C
+                            </p>
+                            <div class="buttonwrapper">
+                                <button class="main-button">Vælg</button>
+                                <button class="alt-sub-button">Detaljer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="nearbyshop">
+                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
+                            <p class="text shopaddress">
+                                Odense, Mageløs, Mageløs 1, 5000 Odense C
+                            </p>
+                            <div class="buttonwrapper">
+                                <button class="main-button">Vælg</button>
+                                <button class="alt-sub-button">Detaljer</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="nearbyshop">
+                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
+                            <p class="text shopaddress">
+                                Odense, Mageløs, Mageløs 1, 5000 Odense C
+                            </p>
+                            <div class="buttonwrapper">
+                                <button class="main-button">Vælg</button>
+                                <button class="alt-sub-button">Detaljer</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="nearbyshop">
+                            <h2 class="shopname">PARADIS ODENSE, MAGELØS</h2>
+                            <p class="text shopaddress">
+                                Odense, Mageløs, Mageløs 1, 5000 Odense C
+                            </p>
+                            <div class="buttonwrapper">
+                                <button class="main-button">Vælg</button>
+                                <button class="alt-sub-button">Detaljer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+    </form>
+    <script src="/js/select.js"></script>
+</body>
+</html>
