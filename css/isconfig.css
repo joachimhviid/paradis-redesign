@@ -22,7 +22,7 @@ body {
 }
 
 .beige {
-  background: #F6F2EC;
+  background: #f6f2ec;
 }
 
 .beige.config-content {
@@ -40,7 +40,7 @@ button {
   width: auto;
   padding: 9px 35px;
   margin: 0 15px 0 0;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .nearbyshop button.alt-sub-button {
@@ -49,22 +49,23 @@ button {
   border-radius: 25px;
   background: none;
   color: #999999;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .nearbyshop button.alt-sub-button:hover {
   cursor: pointer;
   color: #727272;
   border: 1px solid #727272;
-  -webkit-transition: color .3s, border .3s;
-  transition: color .3s, border .3s;
+  -webkit-transition: color 0.3s, border 0.3s;
+  transition: color 0.3s, border 0.3s;
 }
 
 button.main-button {
   display: inline-block;
   padding: 15px 50px;
-  background: #62B9E9;
-  color: #fff;
+  border: #62b9e9 1px solid;
+  background: none;
+  color: #62b9e9;
   width: 220px;
   border-radius: 25px;
   font-size: 1rem;
@@ -72,20 +73,35 @@ button.main-button {
 }
 
 button.main-button:hover {
-  -webkit-transition: .3s;
-  transition: .3s;
-  background: #519abe;
+  -webkit-transition: color 0.3s, background 0.3s;
+  transition: color 0.3s, background 0.3s;
+  background: #62b9e9;
+  color: #fff;
   cursor: pointer;
+}
+
+button.main-button.active {
+  background: #62b9e9;
+  color: #fff;
+  padding-right: 37px;
+}
+
+button.main-button.active:hover {
+  cursor: pointer;
+  -webkit-transition: color 0.3s, background 0.3s;
+  transition: color 0.3s, background 0.3s;
+  background: #4499c7;
+  color: #fff;
 }
 
 button.sub-button {
   background: none;
-  color: #5D5D5D;
+  color: #5d5d5d;
 }
 
 button.sub-button:hover {
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   color: #727272;
   cursor: pointer;
 }
@@ -115,7 +131,7 @@ h3 {
 
 h3.config-desc-heading {
   font-size: 1.4rem;
-  color: #92887B;
+  color: #92887b;
   margin: 0 0 50px;
 }
 
@@ -133,7 +149,7 @@ p.text {
 p.text.shopaddress {
   font-size: 1rem;
   color: #202020;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .center-text {
@@ -155,7 +171,7 @@ p.text.shopaddress {
   left: 100px;
   width: 300px;
   height: 100vh;
-  background: #2A2A2A;
+  background: #2a2a2a;
 }
 
 .config-menu ul {
@@ -174,7 +190,7 @@ p.text.shopaddress {
 
 .config-menu ul li button {
   color: #fff;
-  background: #2A2A2A;
+  background: #2a2a2a;
   font-size: 1rem;
   width: 100%;
   text-align: left;
@@ -184,8 +200,8 @@ p.text.shopaddress {
 .config-menu ul li button:hover {
   background: #202020;
   cursor: pointer;
-  -webkit-transition: background .3s;
-  transition: background .3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .config-menu ul li button.active {
@@ -195,7 +211,7 @@ p.text.shopaddress {
 .config-menu ul li button i.counter {
   float: right;
   letter-spacing: 2px;
-  color: #5D5D5D;
+  color: #5d5d5d;
 }
 
 .config-menu .back-forward-wrapper {
@@ -232,8 +248,8 @@ p.text.shopaddress {
   top: -220px;
   margin: auto;
   border-radius: 50%;
-  -webkit-box-shadow: 0 -5px 40px 5px #D9C8C8;
-          box-shadow: 0 -5px 40px 5px #D9C8C8;
+  -webkit-box-shadow: 0 -5px 40px 5px #d9c8c8;
+          box-shadow: 0 -5px 40px 5px #d9c8c8;
 }
 
 .item-row {
@@ -285,15 +301,15 @@ p.text.shopaddress {
 .config-item .text-wrapper button {
   padding: 9px 20px;
   background: none;
-  color: #CBC0B2;
-  border: #CBC0B2 solid 2px;
+  color: #cbc0b2;
+  border: #cbc0b2 solid 2px;
   border-radius: 25px;
   font-size: 1rem;
 }
 
 .config-item .text-wrapper button:hover {
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   color: #b6a590;
   border: #b6a590 solid 2px;
   cursor: pointer;
@@ -326,27 +342,27 @@ p.text.shopaddress {
   right: calc(20px + 35%);
   height: 30px;
   width: 70px;
-  border: 1px solid #92887B;
+  border: 1px solid #92887b;
   border-radius: 30px;
   text-align: center;
   padding: 5px 0;
 }
 
 .config-item .item-add span {
-  color: #92887B;
+  color: #92887b;
 }
 
 .config-item .item-add:hover {
   cursor: pointer;
-  background: #92887B;
-  -webkit-transition: background .3s;
-  transition: background .3s;
+  background: #92887b;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .config-item .item-add:hover span {
   color: #fff;
-  -webkit-transition: color .3s;
-  transition: color .3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .nearbyshop {
@@ -381,7 +397,7 @@ p.text.shopaddress {
 
 .search-form input {
   font-size: 1rem;
-  color: #8E9091;
+  color: #8e9091;
   padding: 24px 30px 16px 65px;
   border: #f5f5f5 solid 1px;
   width: 100%;
@@ -398,13 +414,13 @@ p.text.shopaddress {
 .search-form input.left:focus + .label-address {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .search-form input.left:valid + .label-address {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .search-form input.right {
@@ -414,31 +430,31 @@ p.text.shopaddress {
 .search-form input.right:focus + .label-zipcode {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .search-form input.right:valid + .label-zipcode {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .search-form input.searchbutton {
   position: absolute;
   right: 20px;
-  top: calc((60px - 24px - 1rem)/2);
+  top: calc((60px - 24px - 1rem) / 2);
   padding: 12px 40px;
   width: auto;
-  background: #62B9E9;
+  background: #62b9e9;
   color: #fff;
   border: none;
   border-radius: 25px;
 }
 
 .search-form input.searchbutton:hover {
-  -webkit-transition: .3s;
-  transition: .3s;
-  background: #59A9D1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #59a9d1;
   cursor: pointer;
 }
 
@@ -448,7 +464,7 @@ label img {
   position: absolute;
   left: 20px;
   top: 25%;
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .address-input {
@@ -463,9 +479,9 @@ label img {
   left: 65px;
   top: 20px;
   font-size: 1rem;
-  color: #8E9091;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  color: #8e9091;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .zipcode-input {
@@ -480,9 +496,9 @@ label img {
   left: 65px;
   top: 20px;
   font-size: 1rem;
-  color: #8E9091;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  color: #8e9091;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .container-wide.config-section {
@@ -551,7 +567,7 @@ label img {
     padding: 10px 0;
   }
   h2 .menu-item a {
-    font-size: .5rem;
+    font-size: 0.5rem;
     text-decoration: none;
     color: inherit;
   }
@@ -565,8 +581,8 @@ label img {
     z-index: 90;
     top: 0;
     background: #fff;
-    -webkit-transition: top .3s;
-    transition: top .3s;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
   }
   h2 .top-menu .top-menu-wrapper {
     display: -webkit-box;
@@ -600,7 +616,7 @@ label img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: #F5F1F1;
+    background: #f5f1f1;
     padding: 24px 0 21px;
   }
   h2 .top-menu .top-menu-wrapper li.mobile-cart img {
@@ -658,20 +674,20 @@ label img {
     max-width: 50px;
   }
   li.menu-item svg.logo:hover {
-    -webkit-animation: icecream-bounce .4s ease-in-out 0s 1;
-            animation: icecream-bounce .4s ease-in-out 0s 1;
+    -webkit-animation: icecream-bounce 0.4s ease-in-out 0s 1;
+            animation: icecream-bounce 0.4s ease-in-out 0s 1;
   }
   li.menu-item svg.logo:hover #red {
-    -webkit-animation: icecream-bounce .4s ease-in-out .05s 1;
-            animation: icecream-bounce .4s ease-in-out .05s 1;
+    -webkit-animation: icecream-bounce 0.4s ease-in-out 0.05s 1;
+            animation: icecream-bounce 0.4s ease-in-out 0.05s 1;
   }
   li.menu-item svg.logo:hover #white {
-    -webkit-animation: icecream-bounce .4s ease-in-out .1s 1;
-            animation: icecream-bounce .4s ease-in-out .1s 1;
+    -webkit-animation: icecream-bounce 0.4s ease-in-out 0.1s 1;
+            animation: icecream-bounce 0.4s ease-in-out 0.1s 1;
   }
   li.menu-item svg.logo:hover #yellow {
-    -webkit-animation: icecream-bounce .4s ease-in-out .15s 1;
-            animation: icecream-bounce .4s ease-in-out .15s 1;
+    -webkit-animation: icecream-bounce 0.4s ease-in-out 0.15s 1;
+            animation: icecream-bounce 0.4s ease-in-out 0.15s 1;
   }
   .menu-item {
     text-align: center;
@@ -688,9 +704,9 @@ label img {
     margin: 0 0 4px 0;
   }
   .menu-item:hover:not(.logo-item) {
-    background: #EAEAEA;
-    -webkit-transition: background .3s;
-    transition: background .3s;
+    background: #eaeaea;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
   }
 }
 

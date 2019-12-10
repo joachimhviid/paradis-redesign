@@ -1,11 +1,12 @@
 function Select(button) {
     var checkbox = button.parentNode.querySelector("input");
-    console.log(checkbox.checked);
-    if(checkbox.checked = true) {
+    if (checkbox.checked === true) {
         checkbox.checked = false;
-        //this.style.background = "salmon";
-    } else if(checkbox.checked = false) {
+        button.classList.toggle("active");
+        button.innerHTML = "Vælg";
+    } else {
         checkbox.checked = true;
-        //this.style.background = "#62B9E9";
+        button.classList.toggle("active");
+        button.innerHTML = "Valgt";
     }
 }
