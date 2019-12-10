@@ -198,7 +198,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">Grundsmag</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button type="button" onclick="SelectOne(this)">Tilføj <span>+</span></button>
+                                <input type="radio" name="butik[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -468,6 +469,7 @@
         </div>
     </form>
     <script src="/js/change-active.js"></script>
+    <script src="/js/select.js"></script>
 </body>
 
 </html>

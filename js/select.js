@@ -1,7 +1,6 @@
-var section = document.getElementById("butik");
-var cards = section.getElementsByClassName("main-button");
-
-Select = (button) => {
+SelectOne = (button) => {
+    var section = button.closest("section");
+    var cards = section.getElementsByClassName("main-button");
     var checkbox = button.parentNode.querySelector("input");
     if (checkbox.checked === true) {
         checkbox.checked = false;
@@ -15,5 +14,18 @@ Select = (button) => {
         }
         button.classList.add("active");
         button.innerHTML = "Valgt";
+    }
+}
+
+Select = (button) => {
+    var checkbox = button.parentNode.querySelector("input");
+    if (checkbox.checked === true) {
+        checkbox.checked = false;
+        button.classList.remove("active");
+        button.innerHTML = "Vælg";
+    } else {
+        checkbox.checked = true;
+        button.classList.add("active");
+        button.innerHTML = "Tilføjet";
     }
 }

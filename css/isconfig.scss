@@ -43,10 +43,40 @@ button {
     border: #62b9e9 1px solid;
     background: none;
     color: #62b9e9;
+
     &.active {
       background: #62b9e9;
       color: #fff;
       padding-right: 37px;
+
+      &:hover {
+        cursor: pointer;
+        transition: color 0.3s, background 0.3s;
+        background: #4499c7;
+        color: #fff;
+      }
+    }
+  }
+
+  a {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+
+    .nearbyshop &.main-button {
+      width: auto;
+      padding: 9px 35px;
+      margin: 0 15px 0 0;
+      font-size: 0.75rem;
+      border: #62b9e9 1px solid;
+      background: none;
+      color: #62b9e9;
+
+      &.active {
+        background: #62b9e9;
+        color: #fff;
+        padding-right: 37px;
+      }
 
       &:hover {
         cursor: pointer;
@@ -301,6 +331,17 @@ p.text {
         color: rgb(182, 165, 144);
         border: rgb(182, 165, 144) solid 2px;
         cursor: pointer;
+      }
+      &.active {
+        background: rgb(182, 165, 144);
+        color: #fff;
+        padding-right: 37px;
+        &:hover {
+          cursor: pointer;
+          transition: color 0.3s, background 0.3s;
+          background: rgb(158, 141, 120);
+          color: #fff;
+        }
       }
     }
   }
