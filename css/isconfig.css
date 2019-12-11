@@ -352,7 +352,6 @@ p.text.config-text {
 .config-item .text-wrapper button.active {
   background: #b6a590;
   color: #fff;
-  padding-right: 37px;
 }
 
 .config-item .text-wrapper button.active:hover {
@@ -489,7 +488,7 @@ p.text.config-text {
 
 @media (max-width: 768px) {
   .not-mobile {
-    display: none;
+    display: none !important;
   }
   .container-wide {
     padding: 0 40px;
@@ -514,6 +513,9 @@ p.text.config-text {
   h2 p.text {
     font-size: 1rem;
     line-height: 1.6;
+  }
+  h3.config-desc-heading {
+    margin: 0 15px 30px 15px;
   }
   .menu {
     width: 100%;
@@ -603,22 +605,82 @@ p.text.config-text {
     padding-top: 70px;
   }
   .config-menu {
-    display: none;
     left: 0;
     top: 70px;
     width: 100%;
     height: 70px;
+    z-index: 98;
   }
   .config-menu .menu-toggle {
     display: block;
     position: absolute;
     top: 0;
-    height: 30px;
-    width: 30px;
-    background: #62b9e9;
+    z-index: 120;
+    left: calc(50% - 100px);
+    height: 70px;
+    width: 200px;
+    background: none;
+  }
+  .config-menu ul li button.configmenubutton {
+    display: none;
+  }
+  .config-menu ul li button.configmenubutton.active {
+    display: inline-block;
+    height: 70px;
+    text-align: center;
+  }
+  .config-menu ul li a.configmenubutton {
+    display: none;
+  }
+  .config-menu ul li a.configmenubutton.active {
+    display: inline-block;
+    height: 70px;
+    text-align: center;
+  }
+  .config-menu .back-forward-wrapper {
+    position: fixed;
+    width: 100%;
+    top: 89px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .config-menu .back-forward-wrapper button {
+    padding: 0;
+    height: 32px;
+    width: 32px;
+    background: none;
+  }
+  .config-menu .back-forward-wrapper button.left-chev {
+    margin-left: 20px;
+  }
+  .config-menu .back-forward-wrapper button.right-chev {
+    margin-right: 20px;
   }
   .nearbyshop {
     padding: 40px;
+  }
+  .config-icecream-wrapper {
+    margin: 0 auto 20px;
+    width: 100%;
+    height: 300px;
+  }
+  .config-icecream-wrapper .config-icecream-glow {
+    width: 60%;
+    height: 175px;
+    top: -190px;
+  }
+  .config-item {
+    margin-bottom: 30px;
+    padding: 30px 0 30px 30px;
+  }
+  .config-item .text-wrapper button {
+    padding: 9px 15px;
   }
 }
 

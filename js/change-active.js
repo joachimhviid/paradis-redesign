@@ -81,3 +81,14 @@ PrevSection = () => {
         currentID == configSections[4].id ? configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)" : null;
     }
 }
+
+ToggleMenu = () => {
+    for (let i = 0; i < menuBtns.length; i++) {
+        if (menuBtns[i].style.display == "none") {
+            //console.log(menuBtns[i]);
+            menuBtns[i].style.display = "inline-block";
+        } else if (menuBtns[i].style.display == "inline-block" && menuBtns[i].className != " active") {
+            menuBtns[i].style.display = "none";
+        }
+    }
+}
