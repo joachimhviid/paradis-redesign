@@ -60,37 +60,6 @@ button {
   color: #fff;
 }
 
-button a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: none;
-  outline: none;
-}
-
-.nearbyshop button a.main-button {
-  width: auto;
-  padding: 9px 35px;
-  margin: 0 15px 0 0;
-  font-size: 0.75rem;
-  border: #62b9e9 1px solid;
-  background: none;
-  color: #62b9e9;
-}
-
-.nearbyshop button a.main-button.active {
-  background: #62b9e9;
-  color: #fff;
-  padding-right: 37px;
-}
-
-.nearbyshop button a.main-button:hover {
-  cursor: pointer;
-  -webkit-transition: color 0.3s, background 0.3s;
-  transition: color 0.3s, background 0.3s;
-  background: #4499c7;
-  color: #fff;
-}
-
 .nearbyshop button.alt-sub-button {
   padding: 9px 25px;
   border: 1px solid #999999;
@@ -209,6 +178,10 @@ p.text.config-text {
   width: 300px;
   height: 100vh;
   background: #2a2a2a;
+}
+
+.config-menu .menu-toggle {
+  display: none;
 }
 
 .config-menu ul {
@@ -452,11 +425,45 @@ p.text.config-text {
   height: 200px;
   background: #fff;
   padding: 40px 40px;
+  margin-bottom: 30px;
 }
 
 .nearbyshop .buttonwrapper {
   position: absolute;
-  bottom: 40px;
+  bottom: 70px;
+}
+
+.nearbyshop .buttonwrapper a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.nearbyshop .buttonwrapper a.main-button {
+  width: auto;
+  padding: 9px 35px;
+  margin: 0 15px 0 0;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  border: #62b9e9 1px solid;
+  background: none;
+  color: #62b9e9;
+}
+
+.nearbyshop .buttonwrapper a.main-button.active {
+  background: #62b9e9;
+  color: #fff;
+  padding-right: 37px;
+}
+
+.nearbyshop .buttonwrapper a.main-button:hover {
+  cursor: pointer;
+  -webkit-transition: color 0.3s, background 0.3s;
+  transition: color 0.3s, background 0.3s;
+  background: #4499c7;
+  color: #fff;
 }
 
 .searchwrapper {
@@ -487,8 +494,14 @@ p.text.config-text {
   .container-wide {
     padding: 0 40px;
   }
+  .container-wide.config-section {
+    padding: 0 20px;
+  }
   .site-content {
     margin-left: 0;
+  }
+  .site-content.config-spacing {
+    margin: 140px 0 0 0;
   }
   h1.heading {
     font-size: 2rem;
@@ -502,7 +515,7 @@ p.text.config-text {
     font-size: 1rem;
     line-height: 1.6;
   }
-  h2 .menu {
+  .menu {
     width: 100%;
     height: 70px;
     z-index: 90;
@@ -510,7 +523,7 @@ p.text.config-text {
     bottom: 0;
     background: #fff;
   }
-  h2 .menu .menu-item-list {
+  .menu .menu-item-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -522,22 +535,22 @@ p.text.config-text {
         justify-content: space-around;
     padding: 0 30px;
   }
-  h2 li.menu-item.logo-item {
+  li.menu-item.logo-item {
     display: none;
   }
-  h2 .menu-item {
+  .menu-item {
     text-align: center;
     padding: 10px 0;
   }
-  h2 .menu-item a {
+  .menu-item a {
     font-size: 0.5rem;
     text-decoration: none;
     color: inherit;
   }
-  h2 .menu-item a img {
+  .menu-item a img {
     max-width: 30px;
   }
-  h2 .top-menu {
+  .top-menu {
     height: 70px;
     width: 100%;
     position: fixed;
@@ -547,7 +560,7 @@ p.text.config-text {
     -webkit-transition: top 0.3s;
     transition: top 0.3s;
   }
-  h2 .top-menu .top-menu-wrapper {
+  .top-menu .top-menu-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -560,13 +573,13 @@ p.text.config-text {
             justify-content: space-between;
     padding: 0 30px;
   }
-  h2 .top-menu .top-menu-wrapper li {
+  .top-menu .top-menu-wrapper li {
     padding: 12px 0;
   }
-  h2 .top-menu .top-menu-wrapper li img {
+  .top-menu .top-menu-wrapper li img {
     height: 100%;
   }
-  h2 .top-menu .top-menu-wrapper li.mobile-cart {
+  .top-menu .top-menu-wrapper li.mobile-cart {
     width: 60px;
     height: 100%;
     display: -webkit-box;
@@ -582,12 +595,30 @@ p.text.config-text {
     background: #f5f1f1;
     padding: 24px 0 21px;
   }
-  h2 .top-menu .top-menu-wrapper li.mobile-cart img {
+  .top-menu .top-menu-wrapper li.mobile-cart img {
     width: 25px;
     height: 23px;
   }
-  h2 .logo-text {
+  .logo-text {
     padding-top: 70px;
+  }
+  .config-menu {
+    display: none;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 70px;
+  }
+  .config-menu .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    background: #62b9e9;
+  }
+  .nearbyshop {
+    padding: 40px;
   }
 }
 
