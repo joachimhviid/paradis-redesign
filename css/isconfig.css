@@ -337,21 +337,24 @@ p.text.config-text {
 .config-item .text-wrapper button:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: #b6a590;
-  border: #b6a590 solid 2px;
+  background: #4499c7;
+  color: #fff;
+  border: #4499c7 solid 2px;
   cursor: pointer;
 }
 
 .config-item .text-wrapper button.active {
-  background: #b6a590;
+  background: #62b9e9;
   color: #fff;
+  border: 2px solid #62b9e9;
 }
 
 .config-item .text-wrapper button.active:hover {
   cursor: pointer;
-  -webkit-transition: color 0.3s, background 0.3s;
-  transition: color 0.3s, background 0.3s;
-  background: #9e8d78;
+  -webkit-transition: color 0.3s, background 0.3s, border .3s;
+  transition: color 0.3s, background 0.3s, border .3s;
+  background: #4499c7;
+  border: 2px solid #4499c7;
   color: #fff;
 }
 
@@ -606,6 +609,13 @@ p.text.config-text {
     height: 70px;
     width: 200px;
     background: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+  .menu-toggle i.counter {
+    margin-left: 10px;
+    letter-spacing: 2px;
+    color: #5d5d5d;
   }
   .mobile-config-menu {
     left: 0;
@@ -621,7 +631,7 @@ p.text.config-text {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background: #2a2a2a;
+    background: #202020;
   }
   .mobile-config-menu ul {
     display: -webkit-box;
@@ -631,6 +641,9 @@ p.text.config-text {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: fixed;
+    top: 140px;
+    width: 100%;
   }
   .mobile-config-menu ul li button.configmenubutton {
     display: none;
@@ -648,11 +661,14 @@ p.text.config-text {
     transition: background 0.3s;
   }
   .mobile-config-menu ul li button.configmenubutton.active {
-    display: inline-block;
+    display: none;
     height: 70px;
-    text-align: center;
-    position: absolute;
-    top: 0;
+    background: #202020;
+  }
+  .mobile-config-menu ul li button.configmenubutton i.counter {
+    float: right;
+    letter-spacing: 2px;
+    color: #5d5d5d;
   }
   .mobile-config-menu ul li a.configmenubutton {
     display: none;

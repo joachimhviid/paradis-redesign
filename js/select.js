@@ -19,10 +19,11 @@ SelectOne = button => {
 
 Select = button => {
     var checkbox = button.parentNode.querySelector("input");
+
     if (checkbox.checked === true) {
         checkbox.checked = false;
         button.classList.remove("active");
-        button.innerHTML = "Vælg";
+        button.innerHTML = "Tilføj +";
     } else {
         checkbox.checked = true;
         button.classList.add("active");

@@ -138,7 +138,7 @@
             </button>
         </div>
     </div>
-    <button type="button" class="menu-toggle" onclick="ToggleMenu()"></button>
+    <button type="button" class="menu-toggle" onclick="ToggleMenu()" id="mobileToggle">Grundsmag</button>
     <div class="mobile-config-menu not-desktop" id="mobileConfigMenu">
         <ul>
             <li>
@@ -147,7 +147,7 @@
                 </a>
             </li>
             <li>
-                <button onclick="ChangeSection(grundsmage)" class="configmenubutton active">
+                <button onclick="ChangeSection(grundsmage)" class="configmenubutton">
                     Grundsmag
                 </button>
             </li>
@@ -173,27 +173,21 @@
             </li>
         </ul>
         <div class="back-forward-wrapper">
-            <button onclick="PrevSection()" class="not-desktop left-chev">
+            <button onclick="PrevSection()" class="not-desktop left-chev" id="prevChev" style="visibility: hidden;">
                 <img src="/assets/chevron_left-24px.svg" alt="left chevron">
             </button>
-            <button onclick="NextSection()" class="not-desktop right-chev">
+            <button onclick="NextSection()" class="not-desktop right-chev" id="nextChev">
                 <img src="/assets/chevron_right-24px.svg" alt="right chevron">
             </button>
         </div>
     </div>
-    <!-- <script>
-        ToggleMenu = () => {
-            var x = document.getElementById("mobileConfigMenu");
-            x.style.display = x.style.display === 'inline-block' ? 'none' : 'inline-block';
-        }
-    </script> -->
     <form class="site-content config-spacing">
         <div class="container-wide">
             <div class="row">
                 <div class="col-xs-12 center-text">
-                    <h1 class="heading config-heading">DIN PARADIS</h1>
+                    <h1 class="heading config-heading">MIN PARADIS</h1>
                     <p id="headConfigText" class="text config-text">
-                        Vælg en grundsmag til Din Paradis.
+                        Vælg en grundsmag til MinParadis.
                     </p>
                 </div>
             </div>
@@ -273,7 +267,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="ekstraSmage[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -285,7 +280,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="ekstraSmage[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -297,32 +293,22 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="ekstraSmage[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                
+
                     <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
-                            </div>
-                            <div class="item-thumb">
-                                <img src="/assets/is/vanilje.png" alt="vanilla" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="config-item">
-                            <div class="text-wrapper">
-                                <h3 class="item-name">VANILJE</h3>
-                                <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="ekstraSmage[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -334,7 +320,21 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="ekstraSmage[]" value="1" hidden />
+                            </div>
+                            <div class="item-thumb">
+                                <img src="/assets/is/vanilje.png" alt="vanilla" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="config-item">
+                            <div class="text-wrapper">
+                                <h3 class="item-name">VANILJE</h3>
+                                <h4 class="item-sub">+10 DKK</h4>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="ekstraSmage[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -357,7 +357,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="striber[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -369,7 +370,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="striber[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -381,7 +383,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="striber[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -393,7 +396,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="striber[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -405,7 +409,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="striber[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -417,7 +422,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="striber[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -440,7 +446,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="knas[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -452,7 +459,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="knas[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -464,7 +472,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="knas[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -476,7 +485,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="knas[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -488,7 +498,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="knas[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -500,7 +511,8 @@
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj +</button>
+                                <button type="button" onclick="Select(this)">Tilføj +</button>
+                                <input type="checkbox" name="knas[]" value="1" hidden />
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -510,7 +522,67 @@
                 </div>
             </section>
             <section id="kurv" class="container-wide config-section">
-                I think I'm last
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 class="config-desc-heading">
+                            Bekræft dine valg og tilføj til kurv.
+                        </h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="config-item">
+                            <div class="text-wrapper">
+                                <h3 class="item-name">VANILJE</h3>
+                                <h4 class="item-sub">Grundsmag</h4>
+                            </div>
+                            <div class="item-thumb">
+                                <img src="/assets/is/vanilje.png" alt="vanilla" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="config-item">
+                            <div class="text-wrapper">
+                                <h3 class="item-name">VANILJE</h3>
+                                <h4 class="item-sub">Ekstra smag</h4>
+                            </div>
+                            <div class="item-thumb">
+                                <img src="/assets/is/vanilje.png" alt="vanilla" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="config-item">
+                            <div class="text-wrapper">
+                                <h3 class="item-name">VANILJE</h3>
+                                <h4 class="item-sub">Striber</h4>
+                            </div>
+                            <div class="item-thumb">
+                                <img src="/assets/is/vanilje.png" alt="vanilla" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="config-item">
+                            <div class="text-wrapper">
+                                <h3 class="item-name">VANILJE</h3>
+                                <h4 class="item-sub">Knas</h4>
+                            </div>
+                            <div class="item-thumb">
+                                <img src="/assets/is/vanilje.png" alt="vanilla" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h2>
+                            Du har valgt butikken: <br><span style="font-weight: bold;">PARADIS ODENSE, MAGELØS</span>
+                        </h2>
+                    </div>
+                    <div class="col-xs-12">
+                        <h2>
+                            Din pris: <br><span style="font-weight: bold;">40 DKK</span>
+                        </h2>
+                    </div>
+                </div>
             </section>
         </div>
     </form>

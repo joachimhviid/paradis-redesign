@@ -21,9 +21,22 @@ var configSections = [
 
 var configText = document.getElementById("headConfigText");
 
+var mobileToggle = document.getElementById("mobileToggle");
+
+var nextChev = document.getElementById("nextChev");
+var prevChev = document.getElementById("prevChev");
+
 // Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < menuBtns.length; i++) {
+for (let i = 0; i < menuBtns.length; i++) {
     menuBtns[i].addEventListener("click", function () {
+        let currentMenu = document.getElementsByClassName(" active");
+        currentMenu[0].className = currentMenu[0].className.replace(" active", "");
+        this.className += " active";
+    });
+};
+
+for (let i = 0; i < mobileMenuBtns.length; i++) {
+    mobileMenuBtns[i].addEventListener("click", function () {
         let currentMenu = document.getElementsByClassName(" active");
         currentMenu[0].className = currentMenu[0].className.replace(" active", "");
         this.className += " active";
@@ -34,12 +47,53 @@ ChangeSection = (id) => {
     let current = document.getElementsByClassName(" active-section");
     current[0].className = current[0].className.replace(" active-section", "");
     id.className += " active-section";
-    id == grundsmage ? configText.innerHTML = "Vælg en grundsmag til Din Paradis." : null;
-    id == ekstraSmage ? configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)" : null;
-    id == striber ? configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)" : null;
-    id == knas ? configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)" : null;
-    id == kurv ? configText.innerHTML = "Bekræft dine valg og føj Din Paradis til din kurv." : null;
+    if (id == grundsmage) {
+        configText.innerHTML = "Vælg en grundsmag til Din Paradis.";
+        mobileToggle.innerHTML = "Grundsmag";
+        prevChev.style.visibility = "hidden";
+        nextChev.style.visibility = "visible";
+    }
+    if (id == ekstraSmage) {
+        configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)";
+        mobileToggle.innerHTML = "Ekstra smage <i class=\"counter\">0/2</i>";
+        prevChev.style.visibility = "visible";
+        nextChev.style.visibility = "visible";
+    }
+    if (id == striber) {
+        configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)";
+        mobileToggle.innerHTML = "Striber <i class=\"counter\">0/2</i>";
+        prevChev.style.visibility = "visible";
+        nextChev.style.visibility = "visible";
+    }
+    if (id == knas) {
+        configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)";
+        mobileToggle.innerHTML = "Knas og stykker <i class=\"counter\">0/2</i>";
+        prevChev.style.visibility = "visible";
+        nextChev.style.visibility = "visible";
+    }
+    if (id == kurv) {
+        configText.innerHTML = "Bekræft dine valg og føj Din Paradis til din kurv.";
+        mobileToggle.innerHTML = "Føj til kurv";
+        prevChev.style.visibility = "visible";
+        nextChev.style.visibility = "hidden";
+    }
+    // id == grundsmage ? configText.innerHTML = "Vælg en grundsmag til Din Paradis." : null;
+    // id == ekstraSmage ? configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)" : null;
+    // id == striber ? configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)" : null;
+    // id == knas ? configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)" : null;
+    // id == kurv ? configText.innerHTML = "Bekræft dine valg og føj Din Paradis til din kurv." : null;
 };
+
+// ChangeSectionMobile = (id) => {
+//     let current = document.getElementsByClassName(" active-section");
+//     current[0].className = current[0].className.replace(" active-section", "");
+//     id.className += " active-section";
+//     id == grundsmage ? configText.innerHTML = "Vælg en grundsmag til Din Paradis." : null;
+//     id == ekstraSmage ? configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)" : null;
+//     id == striber ? configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)" : null;
+//     id == knas ? configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)" : null;
+//     id == kurv ? configText.innerHTML = "Bekræft dine valg og føj Din Paradis til din kurv." : null;
+// };
 
 NextSection = () => {
     let current = document.getElementsByClassName(" active-section");
@@ -57,10 +111,28 @@ NextSection = () => {
             configSections[i].className += " active-section";
             menuBtns[i].className += " active";
         }
-        currentID == configSections[0].id ? configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)" : null;
-        currentID == configSections[1].id ? configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)" : null;
-        currentID == configSections[2].id ? configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)" : null;
-        currentID == configSections[3].id ? configText.innerHTML = "Bekræft dine valg og føj Din Paradis til din kurv." : null;
+        if (currentID == configSections[0].id) {
+            configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)";
+            mobileToggle.innerHTML = "Ekstra smage <i class=\"counter\">0/2</i>";
+            prevChev.style.visibility = "visible";
+        }
+        if (currentID == configSections[1].id) {
+            configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)";
+            mobileToggle.innerHTML = "Striber <i class=\"counter\">0/2</i>";
+        }
+        if (currentID == configSections[2].id) {
+            configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)";
+            mobileToggle.innerHTML = "Knas og stykker <i class=\"counter\">0/2</i>";
+        }
+        if (currentID == configSections[3].id) {
+            configText.innerHTML = "Bekræft dine valg og føj Din Paradis til din kurv.";
+            mobileToggle.innerHTML = "Føj til kurv";
+            nextChev.style.visibility = "hidden";
+        }
+        // currentID == configSections[0].id ? configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)" : null;
+        // currentID == configSections[1].id ? configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)" : null;
+        // currentID == configSections[2].id ? configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)" : null;
+        // currentID == configSections[3].id ? configText.innerHTML = "Bekræft dine valg og føj Din Paradis til din kurv." : null;
     }
 };
 
@@ -81,16 +153,39 @@ PrevSection = () => {
             configSections[e].className += " active-section";
             menuBtns[e].className += " active";
         }
-        currentID == configSections[1].id ? configText.innerHTML = "Vælg en grundsmag til Din Paradis." : null;
-        currentID == configSections[2].id ? configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)" : null;
-        currentID == configSections[3].id ? configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)" : null;
-        currentID == configSections[4].id ? configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)" : null;
+        if (currentID == configSections[1].id) {
+            configText.innerHTML = "Vælg en grundsmag til Din Paradis.";
+            mobileToggle.innerHTML = "Grundsmag";
+            prevChev.style.visibility = "hidden";
+        }
+        if (currentID == configSections[2].id) {
+            configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)";
+            mobileToggle.innerHTML = "Ekstra smage <i class=\"counter\">0/2</i>";
+        }
+        if (currentID == configSections[3].id) {
+            configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)";
+            mobileToggle.innerHTML = "Striber <i class=\"counter\">0/2</i>";
+        }
+        if (currentID == configSections[4].id) {
+            configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)";
+            mobileToggle.innerHTML = "Knas og stykker <i class=\"counter\">0/2</i>";
+            nextChev.style.visibility = "visible";
+        }
+        // currentID == configSections[1].id ? configText.innerHTML = "Vælg en grundsmag til Din Paradis." : null;
+        // currentID == configSections[2].id ? configText.innerHTML = "Vælg ekstra smage til Din Paradis. (Valgfrit)" : null;
+        // currentID == configSections[3].id ? configText.innerHTML = "Vælg striber til Din Paradis. (Valgfrit)" : null;
+        // currentID == configSections[4].id ? configText.innerHTML = "Vælg knasende stykker til Din Paradis. (Valgfrit)" : null;
     }
 }
 
 ToggleMenu = () => {
     for (let i = 0; i < mobileMenuBtns.length; i++) {
-        mobileMenuBtns[i].style.display = mobileMenuBtns[i].style.display === 'inline-block' && mobileMenuBtns[i].className != "configmenubutton active" ? 'none' : 'inline-block';
+        mobileMenuBtns[i].style.display = mobileMenuBtns[i].style.display === 'inline-block' ? 'none' : 'inline-block';
+        // if (mobileMenuBtns[i].style.display = mobileMenuBtns[i].style.display === 'inline-block' && mobileMenuBtns[i].className != "configmenubutton active") {
+        //     mobileMenuBtns[i].style.display = "none";
+        // } else {
+        //     mobileMenuBtns[i].style.display = "inline-block";
+        // }
         // if (mobileMenuBtns[i].style.display == "none") {
         //     console.log(menuBtns[i]);
         //     mobileMenuBtns[i].style.display = "inline-block";

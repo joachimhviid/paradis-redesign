@@ -297,19 +297,22 @@ p.text {
 
       &:hover {
         transition: 0.3s;
-        color: rgb(182, 165, 144);
-        border: rgb(182, 165, 144) solid 2px;
+        background: #4499c7;
+        color: #fff;
+        border: #4499c7 solid 2px;
         cursor: pointer;
       }
 
       &.active {
-        background: rgb(182, 165, 144);
+        background: #62b9e9;
         color: #fff;
+        border: 2px solid #62b9e9;
 
         &:hover {
           cursor: pointer;
-          transition: color 0.3s, background 0.3s;
-          background: rgb(158, 141, 120);
+          transition: color 0.3s, background 0.3s, border .3s;
+          background: #4499c7;
+          border: 2px solid #4499c7;
           color: #fff;
         }
       }
@@ -660,8 +663,16 @@ p.text {
     height: 70px;
     width: 200px;
     background: none;
+    color: #fff;
+    font-size: 1rem;
+
+    i.counter {
+      margin-left: 10px;
+      letter-spacing: 2px;
+      color: #5d5d5d;
+    }
   }
-  
+
   .mobile-config-menu {
     //display: none;
     left: 0;
@@ -672,13 +683,16 @@ p.text {
     position: fixed;
     display: flex;
     flex-direction: column;
-    background: #2a2a2a;
+    background: #202020;
 
-    
+
 
     ul {
       display: flex;
       flex-direction: column;
+      position: fixed;
+      top: 140px;
+      width: 100%;
 
       li {
         button.configmenubutton {
@@ -697,11 +711,15 @@ p.text {
           }
 
           &.active {
-            display: inline-block;
+            display: none;
             height: 70px;
-            text-align: center;
-            position: absolute;
-            top: 0;
+            background: #202020;
+          }
+
+          i.counter {
+            float: right;
+            letter-spacing: 2px;
+            color: #5d5d5d;
           }
         }
 

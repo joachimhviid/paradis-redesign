@@ -96,10 +96,53 @@
             </ul>
         </div>
     </nav>
-    <div class="config-menu" id="configMenu">
+    <div class="config-menu not-mobile" id="configMenu">
         <ul>
             <li>
-                <a href="/findbutik.html" class="active">
+                <a href="/findbutik.html">
+                    Find butik
+                </a>
+            </li>
+            <li>
+                <button onclick="ChangeSection(grundsmage)" class="configmenubutton active">
+                    Grundsmag
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(ekstraSmage)" class="configmenubutton">
+                    Ekstra smage<i class="counter">0/2</i>
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(striber)" class="configmenubutton">
+                    Striber<i class="counter">0/2</i>
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(knas)" class="configmenubutton">
+                    Knas og stykker<i class="counter">0/2</i>
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(kurv)" class="configmenubutton">
+                    Føj til kurv
+                </button>
+            </li>
+        </ul>
+        <div class="back-forward-wrapper">
+            <button onclick="NextSection()" class="main-button not-mobile">
+                Fortsæt videre
+            </button>
+            <button onclick="PrevSection()" class="sub-button not-mobile">
+                Tilbage til forrige
+            </button>
+        </div>
+    </div>
+    <button type="button" class="menu-toggle" onclick="ToggleMenu()" id="mobileToggle">Find butik</button>
+    <div class="mobile-config-menu not-desktop" id="mobileConfigMenu">
+        <ul>
+            <li>
+                <a href="/findbutik.html" class="configmenubutton">
                     Find butik
                 </a>
             </li>
@@ -129,15 +172,14 @@
                 </button>
             </li>
         </ul>
-        <button type="button" class="menu-toggle"></button>
     </div>
     <form class="site-content config-spacing" action="">
         <div class="container-wide">
             <div class="row">
                 <div class="col-xs-12 center-text">
-                    <h1 class="heading config-heading">DIN PARADIS</h1>
+                    <h1 class="heading config-heading">MIN PARADIS</h1>
                     <p id="headConfigText" class="text config-text">
-                        Vælg den butik du vil hente Din Paradis hos.
+                        Vælg den butik du vil hente MinParadis hos.
                     </p>
                 </div>
             </div>
