@@ -1,8 +1,14 @@
 // Get the menu
 var configMenu = document.getElementById("configMenu");
 
+// Get mobile menu
+var mobileConfigMenu = document.getElementById("mobileConfigMenu");
+
 // Get all buttons inside the container
 var menuBtns = configMenu.getElementsByClassName("configmenubutton");
+
+// Get all buttons inside mobile container
+var mobileMenuBtns = mobileConfigMenu.getElementsByClassName("configmenubutton");
 
 // Array of all the section IDs
 var configSections = [
@@ -83,12 +89,13 @@ PrevSection = () => {
 }
 
 ToggleMenu = () => {
-    for (let i = 0; i < menuBtns.length; i++) {
-        if (menuBtns[i].style.display == "none") {
-            //console.log(menuBtns[i]);
-            menuBtns[i].style.display = "inline-block";
-        } else if (menuBtns[i].style.display == "inline-block" && menuBtns[i].className != " active") {
-            menuBtns[i].style.display = "none";
-        }
+    for (let i = 0; i < mobileMenuBtns.length; i++) {
+        mobileMenuBtns[i].style.display = mobileMenuBtns[i].style.display === 'inline-block' && mobileMenuBtns[i].className != "configmenubutton active" ? 'none' : 'inline-block';
+        // if (mobileMenuBtns[i].style.display == "none") {
+        //     console.log(menuBtns[i]);
+        //     mobileMenuBtns[i].style.display = "inline-block";
+        // } else if (mobileMenuBtns[i].style.display == "inline-block" && mobileMenuBtns[i].className != " active") {
+        //     mobileMenuBtns[i].style.display = "none";
+        // }
     }
 }

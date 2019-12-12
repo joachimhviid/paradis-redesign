@@ -96,7 +96,50 @@
             </ul>
         </div>
     </nav>
-    <div class="config-menu" id="configMenu">
+    <div class="config-menu not-mobile" id="configMenu">
+        <ul>
+            <li>
+                <a href="/findbutik.html">
+                    Find butik
+                </a>
+            </li>
+            <li>
+                <button onclick="ChangeSection(grundsmage)" class="configmenubutton active">
+                    Grundsmag
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(ekstraSmage)" class="configmenubutton">
+                    Ekstra smage<i class="counter">0/2</i>
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(striber)" class="configmenubutton">
+                    Striber<i class="counter">0/2</i>
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(knas)" class="configmenubutton">
+                    Knas og stykker<i class="counter">0/2</i>
+                </button>
+            </li>
+            <li>
+                <button onclick="ChangeSection(kurv)" class="configmenubutton">
+                    Føj til kurv
+                </button>
+            </li>
+        </ul>
+        <div class="back-forward-wrapper">
+            <button onclick="NextSection()" class="main-button not-mobile">
+                Fortsæt videre
+            </button>
+            <button onclick="PrevSection()" class="sub-button not-mobile">
+                Tilbage til forrige
+            </button>
+        </div>
+    </div>
+    <button type="button" class="menu-toggle" onclick="ToggleMenu()"></button>
+    <div class="mobile-config-menu not-desktop" id="mobileConfigMenu">
         <ul>
             <li>
                 <a href="/findbutik.html" class="configmenubutton">
@@ -129,22 +172,21 @@
                 </button>
             </li>
         </ul>
-        <button type="button" class="menu-toggle" onclick="ToggleMenu()"></button>
         <div class="back-forward-wrapper">
-            <button onclick="NextSection()" class="main-button not-mobile">
-                Fortsæt videre
-            </button>
-            <button onclick="PrevSection()" class="sub-button not-mobile">
-                Tilbage til forrige
-            </button>
-            <button class="not-desktop left-chev">
+            <button onclick="PrevSection()" class="not-desktop left-chev">
                 <img src="/assets/chevron_left-24px.svg" alt="left chevron">
             </button>
-            <button class="not-desktop right-chev">
+            <button onclick="NextSection()" class="not-desktop right-chev">
                 <img src="/assets/chevron_right-24px.svg" alt="right chevron">
             </button>
         </div>
     </div>
+    <!-- <script>
+        ToggleMenu = () => {
+            var x = document.getElementById("mobileConfigMenu");
+            x.style.display = x.style.display === 'inline-block' ? 'none' : 'inline-block';
+        }
+    </script> -->
     <form class="site-content config-spacing">
         <div class="container-wide">
             <div class="row">
@@ -226,74 +268,73 @@
                     </div>
                 </div>
                 <div class="row item-row">
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row item-row">
-                    <div class="col-xs-4">
+                
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -311,74 +352,72 @@
                     </div>
                 </div>
                 <div class="row item-row">
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row item-row">
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
@@ -396,74 +435,72 @@
                     </div>
                 </div>
                 <div class="row item-row">
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row item-row">
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4">
                         <div class="config-item">
                             <div class="text-wrapper">
                                 <h3 class="item-name">VANILJE</h3>
                                 <h4 class="item-sub">+10 DKK</h4>
-                                <button>Tilføj <span>+</span></button>
+                                <button>Tilføj +</button>
                             </div>
                             <div class="item-thumb">
                                 <img src="/assets/is/vanilje.png" alt="vanilla" />
